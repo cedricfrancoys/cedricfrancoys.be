@@ -1,0 +1,171 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f2c3efc03c0c5a937f1119a7106b867c",
+    "packages": [
+        {
+            "name": "erusev/parsedown",
+            "version": "1.8.0-beta-5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "c26a2ee4bf8ba0270daab7da0353f2525ca6564a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/c26a2ee4bf8ba0270daab7da0353f2525ca6564a",
+                "reference": "c26a2ee4bf8ba0270daab7da0353f2525ca6564a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2018-06-11T18:15:32+00:00"
+        },
+        {
+            "name": "scrivo/highlight.php",
+            "version": "v9.12.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scrivo/highlight.php.git",
+                "reference": "0db45267df6b3bbae224ff86445d6407629e8b96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/0db45267df6b3bbae224ff86445d6407629e8b96",
+                "reference": "0db45267df6b3bbae224ff86445d6407629e8b96",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "symfony/finder": "^2.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Highlight\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Geert Bergman",
+                    "homepage": "http://www.scrivo.org/",
+                    "role": "Project Author"
+                },
+                {
+                    "name": "Vladimir Jimenez",
+                    "homepage": "https://allejo.io",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Martin Folkers",
+                    "homepage": "https://twobrain.io",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Server side syntax highlighter that supports 176 languages. It's a PHP port of highlight.js",
+            "keywords": [
+                "code",
+                "highlight",
+                "highlight.js",
+                "highlight.php",
+                "syntax"
+            ],
+            "time": "2018-08-24T15:45:27+00:00"
+        },
+        {
+            "name": "sixlive/parsedown-highlight",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sixlive/parsedown-highlight.git",
+                "reference": "2c63e0c4f52082cce85592f25c7bafc65c040c74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sixlive/parsedown-highlight/zipball/2c63e0c4f52082cce85592f25c7bafc65c040c74",
+                "reference": "2c63e0c4f52082cce85592f25c7bafc65c040c74",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "1.8.0-beta-5",
+                "php": "^7.1|7.2",
+                "scrivo/highlight.php": "v9.12.0.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.10",
+                "larapack/dd": "^1.0",
+                "phpunit/phpunit": "^6.0|^7.0",
+                "sempro/phpunit-pretty-print": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "sixlive\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "TJ Miller",
+                    "email": "oss@tjmiller.co",
+                    "homepage": "https://tjmiller.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Server side code block rendering for Parsedown",
+            "homepage": "https://github.com/sixlive/parsedown-highlight",
+            "keywords": [
+                "code",
+                "markdown",
+                "parsedown"
+            ],
+            "time": "2018-11-08T21:58:11+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

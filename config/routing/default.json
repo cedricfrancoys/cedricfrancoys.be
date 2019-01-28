@@ -1,0 +1,20 @@
+{
+    "/article/:section/:article": {
+        "GET": {
+            "description": "Displays an article",
+            "operation": "?show=blog_article"
+        }
+    },
+    "/section/:section": {
+        "GET": {
+            "description": "Displays the content of a given section",
+            "operation": "?show=blog_section"
+        }
+    },
+    "/sections": {
+        "GET": {
+            "description": "Displays the list of sections and their related articles",
+            "operation": "?show=blog_sections"
+        }
+    }    
+}
