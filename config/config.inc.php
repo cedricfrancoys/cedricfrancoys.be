@@ -288,11 +288,11 @@ function qn_error_http($error_id) {
     * note: most utilities need these parameters. 
     */
     define('DB_DBMS',		'MYSQL');		// only MySQL is supported so far
-    define('DB_HOST',		'127.0.0.1');   // the full qualified domain name (ex.: www.example.com)
+    define('DB_HOST',		'db');   // the full qualified domain name (ex.: www.example.com)
     define('DB_PORT',		'3306');		// this is the default port for MySQL
-    define('DB_USER',		'root');        // this should be changed for security reasons
-    define('DB_PASSWORD',	'');			// this should be changed for security reasons
-    define('DB_NAME', 		'qinoa');	    // specify the name of the DB that you have created or you plan to use
+    define('DB_USER',		'wordpress');        // this should be changed for security reasons
+    define('DB_PASSWORD',	'wordpress');			// this should be changed for security reasons
+    define('DB_NAME', 		'wordpress');	    // specify the name of the DB that you have created or you plan to use
     define('DB_CHARSET',	'UTF8');		// unless you are really sure of what you're doing, leave this constant to 'UTF8'
 
     /**

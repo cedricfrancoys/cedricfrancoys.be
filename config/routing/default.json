@@ -16,5 +16,23 @@
             "description": "Displays the list of sections and their related articles",
             "operation": "?show=blog_sections"
         }
-    }    
+    },
+    "/terms": {
+        "GET": {
+            "description": "Terms of general conditions",
+            "operation": "?show=blog_terms"
+        }
+    },
+    "/privacy": {
+        "GET": {
+            "description": "Data privacy convention",
+            "operation": "?show=blog_privacy"
+        }
+    },
+    "/legal": {
+        "GET": {
+            "description": "Legal mentions page",
+            "operation": "?show=blog_legal"
+        }
+    }   
 }
