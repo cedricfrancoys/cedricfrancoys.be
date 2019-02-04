@@ -23,7 +23,7 @@ list($params, $providers) = eQual::announce([
 
 // retrieve related article file
 $article_path = './blog/'.$params['section'].'/'.$params['article'].'.md';
-$template_path = './blog/'.$params['section'].'/template.html';
+$template_path = './blog/template.html';
 
 if(!is_file($article_path)) {
     throw new Exception("unknown article", QN_ERROR_INVALID_PARAM);
