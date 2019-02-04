@@ -55,7 +55,7 @@ namespace {
 	define('QN_ERROR_UNKNOWN_SERVICE',  -512);      // server errror : missing service
     define('QN_ERROR_INVALID_CONFIG',   -1024);     // serfver error : faulty configuration
     
-    
+    define('HTTP_REDIRECT_404', '404.html');
 
 /*    
 function error_message($error_code) {
