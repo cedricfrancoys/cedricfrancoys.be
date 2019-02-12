@@ -22,7 +22,7 @@ $template = file_get_contents($template_path);
 $list = '';
 foreach($sections as $section) {    
     $articles = json_decode(eQual::run('get', 'blog_articles', ['section' => $section]), true);
-    $list .= "<h3><a href=\"/section/$section\">$section</h3>".PHP_EOL;
+    $list .= "<h3><a href=\"/section/$section\">$section</a></h3>".PHP_EOL;
     $list .= "<ul>".PHP_EOL;    
     foreach($articles as $article) {
         $list .=  "<li><a href=\"/article/$section/$article\">$article</a></li>".PHP_EOL;        
