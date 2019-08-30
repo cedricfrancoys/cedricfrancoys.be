@@ -82,6 +82,7 @@
 
 #container_digital {
 	height: 100%;
+	text-align: center;
 }
 
 #IMG_13 {
