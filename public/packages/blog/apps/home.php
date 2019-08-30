@@ -347,7 +347,7 @@
     text-align: center;
     text-decoration: none solid rgb(0, 0, 238);
     text-size-adjust: 100%;
-    width: 250px;
+    width: 300px;
     column-rule-color: rgb(0, 0, 238);
     perspective-origin: 125px 20.7px;
     transform-origin: 125px 20.7062px;
