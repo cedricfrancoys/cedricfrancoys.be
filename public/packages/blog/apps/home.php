@@ -81,25 +81,17 @@
 }
 
 #container_digital {
+	height: 100%;
 }
 
 #IMG_13 {
-    box-sizing: border-box;
-    color: rgb(0, 0, 238);
     cursor: pointer;
     height: 41.4125px;
     max-width: 100%;
     text-align: center;
-    text-decoration: none solid rgb(0, 0, 238);
-    text-size-adjust: 100%;
     width: 300px;
-    column-rule-color: rgb(0, 0, 238);
-    perspective-origin: 125px 20.7px;
-    transform-origin: 125px 20.7062px;
-    caret-color: rgb(0, 0, 238);
-    border: 0px none rgb(0, 0, 238);
-    font: normal normal 400 normal 16px / 24px Roboto, sans-serif;
-    outline: rgb(0, 0, 238) none 0px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 
@@ -123,7 +115,11 @@
  
 <div id="header_digital">
 	<div id="container_digital">
-	 <a href="https://digital-facile.cedricfrancoys.be" id="A_12"><img src="/packages/blog/assets/img/digital_facile_link.jpg" alt="" id="IMG_13" /></a>							
+	 <a href="https://digital-facile.cedricfrancoys.be" id="A_12"><span style="
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+"></span><img src="/packages/blog/assets/img/digital_facile_link.jpg" alt="" id="IMG_13" /></a>							
 	</div>
 </div> 
  
