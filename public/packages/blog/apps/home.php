@@ -67,7 +67,7 @@
     }
 	
 	
-#DIV_1 {
+#header_digital {
     box-sizing: border-box;
     height: 67.0125px;
     max-width: 960px;
@@ -80,7 +80,8 @@
     padding: 0px 19.2px;
 }
 
-
+#container_digital {
+}
 
 #IMG_13 {
     box-sizing: border-box;
@@ -120,8 +121,10 @@
  </section>
  
  
-<div id="DIV_1">
+<div id="header_digital">
+	<div id="container_digital">
 	 <a href="https://digital-facile.cedricfrancoys.be" id="A_12"><img src="/packages/blog/assets/img/digital_facile_link.jpg" alt="" id="IMG_13" /></a>							
+	</div>
 </div> 
  
  
