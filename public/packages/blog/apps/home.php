@@ -125,7 +125,7 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
 
                 <div class="col-md-4 col-sm-6" style="color: white; text-align: justify;">
                     <p>Curieux de nature, j'éprouve le besoin systématique de comprendre comment fonctionnent les choses. Passionné depuis toujours par les ordinateurs et l'électronique, j'ai écrit mon premier programme à 10 ans; appris le C et le C++ à 14 ans; et co-fondé une entreprise de services informatiques à 26 ans.</p>
-                    <p>A présent je me définis professionnellement comme <b>Consultant Digital Agile</b>, en proposant un accompagnement sur mesure par des conseils et du développement micro-applicatif.</p>
+                    <p>A présent je me définis professionnellement comme <b>Consultant Digital Agile</b>, en proposant un accompagnement sur mesure, des conseils et du développement micro-applicatif.</p>
                     <p>Mes services s'adressent aux professionnels et s'articulent autour des technologies du web.</p>
                     <p><b>Digital facile</b> est l'étendard sous lequel j'exerce mon activité professionnelle et qui reflète ma volonté de faciliter et de démocratiser l'accès à des besoins basés sur des technologies impliquant des concepts souvent complexes.</p>
                 </div>
