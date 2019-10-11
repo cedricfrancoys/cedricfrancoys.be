@@ -131,7 +131,7 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
                 </div>
 
                 <div class="col-md-4 col-sm-6">
-                    <img src="https://digital-facile.cedricfrancoys.be/assets/img/digital_facile_2.png">
+                    <img src="/packages/blog/assets/img/digital_facile_big.png">
                     <div class="genius-btn mt40 mb30 gradient-bg text-center text-uppercase ul-li-block bold-font" style="margin: auto; margin-top: 30px;">
                         <a href="https://digital-facile.cedricfrancoys.be/">Voir les services</a>
                     </div>
@@ -158,7 +158,7 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
                 </div>
 
                 <div class="col-md-4 col-sm-6">
-                    <img src="https://digital-facile.cedricfrancoys.be/assets/img/digital_facile_2.png">
+                    <img src="/packages/blog/assets/img/digital_facile_big.png">
                     <div class="genius-btn mt40 mb30 gradient-bg text-center text-uppercase ul-li-block bold-font" style="margin: auto; margin-top: 30px;">
                         <a href="https://digital-facile.cedricfrancoys.be/">Voir les services</a>
                     </div>
