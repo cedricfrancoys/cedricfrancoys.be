@@ -66,34 +66,7 @@
         margin-left: 10px;
     }
 	
-	
-#header_digital {
-    box-sizing: border-box;
-    height: 67.0125px;
-    max-width: 960px;
-    text-size-adjust: 100%;
-    width: 960px;
-    perspective-origin: 480px 33.5px;
-    transform-origin: 480px 33.5062px;
-    font: normal normal 400 normal 16px / 24px Roboto, sans-serif;
-    margin: 0px 272.8px;
-    padding: 0px 19.2px;
-}
 
-#container_digital {
-	height: 100%;
-	text-align: center;
-}
-
-#IMG_13 {
-    cursor: pointer;
-    height: 41.4125px;
-    max-width: 100%;
-    text-align: center;
-    width: 300px;
-	display: inline-block;
-	vertical-align: middle;
-}
 
 
 
@@ -104,34 +77,21 @@
  
  
  
- <section id=slide class=slider-section>
- <div id=slider-item class="slider-item-details owl-carousel owl-theme owl-responsive-1000 owl-loaded">
+<section id="slide" class="slider-section">
+    <div id="slider-item" class="slider-item-details owl-carousel owl-theme owl-responsive-1000 owl-loaded">
+    <div class="owl-stage-outer"></div><div class=owl-controls><div class=owl-nav><div class=owl-prev><i class="fas fa-chevron-left"></i></div><div class=owl-next><i class="fas fa-chevron-right"></i></div></div><div class=owl-dots><div class="owl-dot active"><span></span></div><div class=owl-dot><span></span></div><div class=owl-dot><span></span></div><div class=owl-dot><span></span></div></div></div></div>
+</section>
  
  
- 
- 
- <div class=owl-stage-outer></div><div class=owl-controls><div class=owl-nav><div class=owl-prev><i class="fas fa-chevron-left"></i></div><div class=owl-next><i class="fas fa-chevron-right"></i></div></div><div class=owl-dots><div class="owl-dot active"><span></span></div><div class=owl-dot><span></span></div><div class=owl-dot><span></span></div><div class=owl-dot><span></span></div></div></div></div>
- </section>
- 
- 
-<div id="header_digital">
-	<div id="container_digital">
-	 <a href="https://digital-facile.cedricfrancoys.be" id="A_12"><span style="
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-"></span><img src="/packages/blog/assets/img/digital_facile_link.jpg" alt="" id="IMG_13" /></a>							
-	</div>
-</div> 
- 
+
  
  
  
  <section id="why-choose" class="why-choose-section version-four backgroud-style pt75 ">
  <div class="container">
      <div class="section-title mb50 headline text-center">
-         <span class="subtitle">Cédric Françoys</span>
-         <h2>Sharing <span>thoughts and strategies</span> about&nbsp;IT</h2>
+         <h2>Cédric Françoys</h2>
+         <span class="subtitle">Consultant Digital Agile</span>		 
      </div>
  
  
@@ -153,141 +113,26 @@
              
              <div class="row" style="margin-top: 40px;">
 
-             <div class="col-md-4 col-sm-6">
-                <div class="extra-left">
-                     <a href="/sections">
-                     <div class="extra-left-content">
-                         <div class="extra-icon-text text-left">
-                             <div class="features-icon gradient-bg text-center">
-                                 <i class="flaticon-list"></i>
-                                 <div class="feat-tag">
-                                    <span>01</span>
-                                 </div>
-                             </div>
-                             <div class="features-text">
-                                 <div class="features-text-title text-left pb10">
-                                    <h3>Agile &amp; PM.</h3>
-                                 </div>
-                                 <div class="features-text-dec">
-                                    <span>Project management, Agile attitude, Scrum, etc.</span>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     </a>
-                     
-                     <a href="/sections">                     
-                     <div class="extra-left-content">
-                         <div class="extra-icon-text">
-                             <div class="features-icon gradient-bg text-center">
-                                 <i class="flaticon-cogwheel"></i>
-                                 <div class="feat-tag">
-                                 <span>02</span>
-                                 </div>
-                             </div>
-                             <div class="features-text pt25">
-                                 <div class="features-text-title text-left pb10">
-                                    <h3>DevOps &amp; Infrastructure.</h3>
-                                 </div>
-                                 <div class="features-text-dec">
-                                    <span>Containerization: staging, duplication, backup and mirroring.</span>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     </a>
-                     
-                     <a href="/sections">
-                     <div class="extra-left-content">
-                         <div class="extra-icon-text">
-                             <div class="features-icon gradient-bg text-center">
-                                 <i class="flaticon-dna"></i>
-                                 <div class="feat-tag">
-                                    <span>03</span>
-                                 </div>
-                             </div>
-                             <div class="features-text pt25">
-                                 <div class="features-text-title text-left pb10">
-                                    <h3>Team work.</h3>
-                                 </div>
-                                 <div class="features-text-dec">
-                                    <span>Virtual and remote teams, distributed work and concurrent development.</span>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     </a>
-                </div>
+             <div class="col-md-4 col-sm-6" style="color: white; text-align: justify;">
+
+                <p>Curieux de nature, j'éprouve le besoin systématique de comprendre comment fonctionnent les choses. Passionné depuis toujours par les ordinateurs et l'électronique, j'ai écrit mon premier programme à 10 ans; appris le C et le C++ à 14 ans; et co-fondé une entreprise de services informatiques à 26 ans.</p>
+
+                <p>A présent je me définis professionnellement comme <b>Consultant Digital Agile</b>, en proposant un accompagnement sur mesure par des conseils et du développement micro-applicatif.</p>
+
+                <p>Mes services s'adressent aux professionnels et s'articulent autour des technologies du web.</p>
+
+                <p><b>Digital facile</b> est l'étendard sous lequel j'exerce mon activité professionnelle et qui reflète ma volonté de faciliter et de démocratiser l'accès à des besoins basés sur des technologies impliquant des concepts souvent complexes.</p>
+                    
+             </div>
              </div>
              
 
              
              <div class="col-md-4 col-sm-6">
-                 <div class="extra-right">
-                    <a href="/sections">
-                    <div class="extra-left-content">
-                        <div class="extra-icon-text text-right">
-                            <div class="features-icon gradient-bg text-center">
-                                <i class="flaticon-app-store"></i>
-                                <div class="feat-tag">
-                                    <span>04</span>
-                                </div>
-                            </div>
-                            <div class="features-text pt25">
-                                 <div class="features-text-title text-right pb10">
-                                    <h3>Development.</h3>
-                                 </div>
-                                 <div class="features-text-dec text-right">
-                                    <span>Dev best-practices, versionning, continuous integration.</span>
-                                 </div>
-                            </div>
-                        </div>
+                    <img src="https://digital-facile.cedricfrancoys.be/assets/img/digital_facile_2.png">
+                    <div class="genius-btn mt40 mb30 gradient-bg text-center text-uppercase ul-li-block bold-font" style="margin: auto; margin-top: 30px;">
+                        <a href="https://digital-facile.cedricfrancoys.be/">Voir les services</a>
                     </div>
-                    </a>
-                    
-                    <a href="/sections">
-                    <div class="extra-left-content">
-                         <div class="extra-icon-text text-right">
-                             <div class="features-icon gradient-bg text-center">
-                                 <i class="flaticon-technology"></i>
-                                 <div class="feat-tag">
-                                    <span>05</span>
-                                 </div>
-                             </div>
-                             <div class="features-text pt25">
-                                 <div class="features-text-title text-right pb10">
-                                    <h3>APIs &amp; connectivity.</h3>
-                                 </div>
-                                 <div class="features-text-dec text-right">
-                                    <span>ReST, proxying, API mapping, XML, JSON, GraphQL.</span>
-                                 </div>
-                             </div>
-                         </div>
-                    </div>
-                    </a>
-                    
-                    <a href="/sections">
-                    <div class="extra-left-content">
-                        <div class="extra-icon-text text-right">
-                            <div class="features-icon gradient-bg text-center">
-                                <i class="flaticon-business"></i>
-                                <div class="feat-tag">
-                                    <span>06</span>
-                                </div>
-                            </div>
-                            <div class="features-text pt25">
-                                <div class="features-text-title text-right pb10">
-                                    <h3>Qinoa framework.</h3>
-                                </div>
-                                <div class="features-text-dec text-right">
-                                    <span>Agnostic framework with zero learning curve.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                    
-                </div>
              </div>
          
             </div>
