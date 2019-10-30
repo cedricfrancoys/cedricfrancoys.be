@@ -74,7 +74,7 @@
 	font-weight: bold;
 }
 .srv-details .stat-cost {
-	font-size: 30px;
+	font-size: 50px;
 	font-weight: bold;
 }
 .srv-details label {
@@ -358,7 +358,7 @@ $(document).ready(function() {
     </header>
 
     <main id="body" role="main">
-        <div class="container" style="margin-top: 20px;">
+        <div class="container" style="margin-top: 80px;">
 
            <div class="col-sm-12">
                 <div class="col-sm-2"><b>CPU</b></div>
@@ -429,8 +429,6 @@ $(document).ready(function() {
                 <div class="col-sm-4">   
                     <div class="bs-component">
                         <div class="panel panel-default" style="text-align: center; padding: 0; background-color: #89D3CB;">
-                            <h1>Server details</h1>
-                            <p></p>
                             <p><span class="stat-cost">{{context.cost}} EUR</span> / month</p>
 
                         </div>
@@ -439,10 +437,9 @@ $(document).ready(function() {
                 <div class="col-sm-4">   
                     <div class="bs-component">
                         <div class="panel panel-default" style="background-color: #89D3CB;">
-                            <div class="panel-heading">
-                                <i style="width: 20px;" class="fa fa-server" aria-hidden="true"></i><label>Ref:</label> <b>{{selected_srv.ref}}</b>					
-                            </div>
+                            <!-- <div class="panel-heading"></div> -->
                             <div class="panel-body">
+                                <div><i style="width: 20px;" class="fa fa-server" aria-hidden="true"></i><label>Ref:</label> <b>{{selected_srv.ref}}</b></div>
                                 <div><i style="width: 20px;" class="fa fa-microchip" aria-hidden="true"></i><label>CPU:</label> <b>{{selected_srv.cpu_ct}}</b> core(s) @ <b>{{config[context.match_index].cpu_fq}}</b> GHz</div>
                                 <div><i style="width: 20px;" class="fa fa-memory" aria-hidden="true"></i><label>RAM:</label> <b>{{selected_srv.ram}}</b> GB memory</div>		
                                 <div><i style="width: 20px;" class="fa fa-hdd" aria-hidden="true"></i><label>SSD:</label> <b>{{selected_srv.ssd}}</b> GB storage</div>		
@@ -453,9 +450,6 @@ $(document).ready(function() {
                 <div class="col-sm-4">
                     <div class="bs-component">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Server requirement estimates
-                            </div>
                             <div class="panel-body">
                                 <div><i style="width: 20px;" class="fa fa-save" aria-hidden="true"></i><label>Required backup storage:</label> <b>{{context.ssd/2*14}}</b> GB</div>
                                 <div><i style="width: 20px;" class="fa fa-tachometer-alt" aria-hidden="true"></i><label>Max. capacity:</label> <b>{{context.capacity}}</b> visits per second</div>
