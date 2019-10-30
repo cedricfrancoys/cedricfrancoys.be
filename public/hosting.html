@@ -317,399 +317,401 @@ $(document).ready(function() {
     <header 
         id="header" 
         class="navbar navbar-default navbar-fixed-top navbar-inner ng-cloak">
-<div class="container">
-
-    <nav role="navigation">
-
-        <div class="nav navbar-header">
-            <button type="button" class="navbar-toggle" ng-click="rootCtrl.isNavCollapsed = !rootCtrl.isNavCollapsed">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" style="padding: 7px;"><img style="height: 35px;" src="/packages/blog/assets/img/digital_facile_logo_inline.png" /></a>			
-        </div>
         
-        <div class="collapse navbar-collapse" uib-collapse="rootCtrl.isNavCollapsed">
-            <ul class="nav navbar-nav">        
-                <li><a href="https://doc.digital-facile.yb.run/CheckUp">Comment fonctionne le test ?</a></li>
-                <li class="dropdown" uib-dropdown>
-                    <a role="button" uib-dropdown-toggle>
-                        Détail des tests <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu" uib-dropdown-menu>
-                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#performance">Performance</a></li>
-                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#securite">Sécurité</a></li>
-                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#adaptabilite">Adaptabilité</a></li>
-                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#integrabilite">Intégrabilité</a></li>
-                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#visibilite">Visibiltié</a></li>
-                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#legalite">Légalité</a></li>                        
-                    </ul>
-                </li>                
-                <li><a href="mailto:bonjour@cedricfrancoys.be">Contact</a></li>
-            </ul>    
-        </div>
-        
-    </nav>
-    
-</div>        
+        <div class="container">
+
+            <nav role="navigation">
+
+                <div class="nav navbar-header">
+                    <button type="button" class="navbar-toggle" ng-click="rootCtrl.isNavCollapsed = !rootCtrl.isNavCollapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="padding: 7px;"><img style="height: 35px;" src="/packages/blog/assets/img/digital_facile_logo_inline.png" /></a>			
+                </div>
+                
+                <div class="collapse navbar-collapse" uib-collapse="rootCtrl.isNavCollapsed">
+                    <ul class="nav navbar-nav">        
+                        <li><a href="https://doc.digital-facile.yb.run/CheckUp">Comment fonctionne le test ?</a></li>
+                        <li class="dropdown" uib-dropdown>
+                            <a role="button" uib-dropdown-toggle>
+                                Détail des tests <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" uib-dropdown-menu>
+                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#performance">Performance</a></li>
+                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#securite">Sécurité</a></li>
+                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#adaptabilite">Adaptabilité</a></li>
+                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#integrabilite">Intégrabilité</a></li>
+                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#visibilite">Visibiltié</a></li>
+                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#legalite">Légalité</a></li>                        
+                            </ul>
+                        </li>                
+                        <li><a href="mailto:bonjour@cedricfrancoys.be">Contact</a></li>
+                    </ul>    
+                </div>
+                
+            </nav>
+            
+        </div>        
     </header>
 
+    <main id="body" role="main">
+        <div class="container" style="margin-top: 20px;">
 
-<div class="container" style="margin-top: 20px;">
-
-   <div class="col-sm-12">
-        <div class="col-sm-2"><b>CPU</b></div>
-        <div class="col-sm-8 count-slider" >
-			<div class="slider" id="cpu-slider"></div>
-			<div id="cpu-min" class="count-min" ></div>
-			<div id="cpu-max" class="count-max"></div>
-		</div>
-        <div class="col-sm-2 count-value">
-			<input id="cpu-val" type="text" />
-			processor(s)
-		</div>
-   </div>
-
-
-   <div class="col-sm-12">
-        <div class="col-sm-2"><b>RAM</b></div>
-        <div class="col-sm-8 count-slider">
-			<div class="slider" id="ram-slider"></div>
-			<div id="ram-min" class="count-min" ></div>
-			<div id="ram-max" class="count-max"></div>			
-		</div>
-        <div class="col-sm-2 count-value">
-			<input id="ram-val" type="text" />
-			GB memory
-		</div>
-   </div>
-   
-
-	<div class="col-sm-12">
-		<div class="col-sm-2"><b>SSD</b></div>
-		<div class="col-sm-8 count-slider">
-			<div class="slider" id="ssd-slider"></div>
-			<div id="ssd-min" class="count-min" ></div>
-			<div id="ssd-max" class="count-max"></div>			
-		</div>
-		<div class="col-sm-2 count-value">
-			<input id="ssd-val" type="text" />
-			GB storage
-		</div>
-	</div>
-
-	<div class="row">   
-		<div class="col-sm-4">
-		   <label>Software category</label>
-		   <select id="soft-type" >
-			  <option selected="selected" value="cms">CMS</option>   
-			  <option value="ecommerce">eCommerce</option>
-			  <option value="erp">CRM / ERP</option>
-		   </select>
-		</div>
-		
-		<div class="col-sm-4">
-			<label>Hosting plan</label>   
-			<select id="plan-type" >
-			  <option selected="selected" value="basic">Basic</option>   
-			  <option value="standard">Standard</option>
-			  <option value="premium">Premium</option>
-			</select>
-		</div>
-		<div class="col-sm-4">		
-			<span id="srv-count"></span> matching configurations
-		</div>
-	</div>
-   
-
-	<div class="row srv-details" style="margin-top: 20px;" >
-		<div class="col-sm-4">   
-			<div class="bs-component">
-				<div class="panel panel-default" style="text-align: center; padding: 0; background-color: #89D3CB;">
-					<h1>Server details</h1>
-					<p></p>
-					<p><span class="stat-cost">{{context.cost}} EUR</span> / month</p>
-
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-4">   
-			<div class="bs-component">
-				<div class="panel panel-default" style="background-color: #89D3CB;">
-					<div class="panel-heading">
-						<i style="width: 20px;" class="fa fa-server" aria-hidden="true"></i><label>Ref:</label> <b>{{selected_srv.ref}}</b>					
-					</div>
-					<div class="panel-body">
-						<div><i style="width: 20px;" class="fa fa-microchip" aria-hidden="true"></i><label>CPU:</label> <b>{{selected_srv.cpu_ct}}</b> core(s) @ <b>{{config[context.match_index].cpu_fq}}</b> GHz</div>
-						<div><i style="width: 20px;" class="fa fa-memory" aria-hidden="true"></i><label>RAM:</label> <b>{{selected_srv.ram}}</b> GB memory</div>		
-						<div><i style="width: 20px;" class="fa fa-hdd" aria-hidden="true"></i><label>SSD:</label> <b>{{selected_srv.ssd}}</b> GB storage</div>		
-					</div>
-				</div>
-			</div>		
-		</div>
-		<div class="col-sm-4">
-			<div class="bs-component">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						Server requirement estimates
-					</div>
-					<div class="panel-body">
-						<div><i style="width: 20px;" class="fa fa-save" aria-hidden="true"></i><label>Required backup storage:</label> <b>{{context.ssd/2*14}}</b> GB</div>
-						<div><i style="width: 20px;" class="fa fa-tachometer-alt" aria-hidden="true"></i><label>Max. capacity:</label> <b>{{context.capacity}}</b> visits per second</div>
-						<div><i style="width: 20px;" class="fa fa-eye" aria-hidden="true"></i><label>Typical use:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (4 * 100000) | number:0}}k</b> visits per month</div>
-						<div><i style="width: 20px;" class="fa fa-users" aria-hidden="true"></i><label>Max. users:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (80 * 10000)  | number:0}}</b> users</div>
-					</div>
-				</div>
-			</div>		
-		</div>
-		
-	</div>
-   
-	<div class="row srv-details" style="margin-top: 20px;" >
-	
-	<div class="table-responsive compare-table" style="width: 100%;">
-		<div class="table-responsive" style="width: 100%;">
-			<table class="comparison-table comparing-gitlab products-page-comparison" style="margin: auto;">
-				<colgroup>
-					<col width="40%">
-					<col width="15%">
-					<col width="15%">
-					<col width="15%">
-					<col width="15%">
-				</colgroup>
-				<thead class="affix-top">
-					<tr>
-						<th class="text-left table-title"> Features </th>
-						<th class="text-center table-title"> Basic </th>
-						<th class="text-center table-title"> Standard </th>
-						<th class="text-center table-title"> Premium </th>
-					</tr>
-				</thead>
-				<tbody class="header first">
-				
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-shield-alt" aria-hidden="true"></i> Anti-DDoS
-							</p>
-							<p class="feature-in-list-details"> 
-							<b>Protection contre les menaces DDoS</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#anti-ddos">Feature details</a> <br />
-							Votre infrastructure est protégée contre les attaques par déni de service distribué.							
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
-					
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-server" aria-hidden="true"></i> Disk Mirroring 
-							</p>
-							<p class="feature-in-list-details">
-							<b>Système RAID de disques indépendants</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#disk-mirroring">Feature details</a> <br />
-							Toutes les données sont répliquées pour éviter la perte de données en cas de défaillance matérielle.							
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
-					
-
-					
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-lock" aria-hidden="true"></i> SSL certificate
-							</p>
-							<p class="feature-in-list-details">
-							<b>Certificat SSL Let's encrypt</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#ssl-certificate">Feature details</a> <br />
-							Configuration, installation et renouvellement d'un certificat SSL pour une application en HTTPS
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-code-branch" aria-hidden="true"></i> Versioning
-							</p>
-							<p class="feature-in-list-details">
-							<b>Fichiers de l'instance versionnés comme un tout</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#versioning">Feature details</a><br />
-							Toutes les versions de tous les fichiers sont conservées, ce qui permet de revenir facilement à l'état précédent en cas de modification accidentelle.
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
-					
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-chart-bar" aria-hidden="true"></i> Monitoring
-							</p>
-							<p class="feature-in-list-details">
-							<b>Surveillez l'état de votre environnement</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
-							Tous les services et ressources sont surveillés. Une page d'état récapitule le statut de vos serveurs de production.
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-heartbeat" aria-hidden="true"></i> Monitoring externe
-							</p>
-							<p class="feature-in-list-details">
-							<b>Votre environnement est surveillé 24h / 24 et 7j / 7</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
-							Un service externe vérifie en permanence l'accessibilité du site. En cas de défaillance, une alerte est envoyée automatiquement.
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ko"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
-					
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-save" aria-hidden="true"></i> Backups
-							</p>
-							<p class="feature-in-list-details">
-							<b>Sauvegardes sur un serveur de localisation distinct </b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#backups">Feature details</a> <br />
-							Chaque jour, votre base de données de production est sauvegardée et conservée pendant 4 mois.
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ko"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
+           <div class="col-sm-12">
+                <div class="col-sm-2"><b>CPU</b></div>
+                <div class="col-sm-8 count-slider" >
+                    <div class="slider" id="cpu-slider"></div>
+                    <div id="cpu-min" class="count-min" ></div>
+                    <div id="cpu-max" class="count-max"></div>
+                </div>
+                <div class="col-sm-2 count-value">
+                    <input id="cpu-val" type="text" />
+                    processor(s)
+                </div>
+           </div>
 
 
-					
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-user-lock" aria-hidden="true"></i> Preview mode
-							</p>
-							<p class="feature-in-list-details">
-							<b>Contrôle de l'indexation indésirable</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#preview-mode">Feature details</a> <br />
-							Empêchez les robots d'accéder aux instances qui ne sont pas prêtes pour réduire l'impact sur la qualité du référencemen SEO.
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ko"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
+           <div class="col-sm-12">
+                <div class="col-sm-2"><b>RAM</b></div>
+                <div class="col-sm-8 count-slider">
+                    <div class="slider" id="ram-slider"></div>
+                    <div id="ram-min" class="count-min" ></div>
+                    <div id="ram-max" class="count-max"></div>			
+                </div>
+                <div class="col-sm-2 count-value">
+                    <input id="ram-val" type="text" />
+                    GB memory
+                </div>
+           </div>
+           
 
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-cogs" aria-hidden="true"></i> Maintenance mode
-							</p>
-							<p class="feature-in-list-details">
-							<b>Mettez facilement votre instance en pause</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#maintenance-mode">Feature details</a><br />
-							Placez votre site Web en maintenance et évitez les modifications indésirables lors d'une phase de transition.
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ko"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
+            <div class="col-sm-12">
+                <div class="col-sm-2"><b>SSD</b></div>
+                <div class="col-sm-8 count-slider">
+                    <div class="slider" id="ssd-slider"></div>
+                    <div id="ssd-min" class="count-min" ></div>
+                    <div id="ssd-max" class="count-max"></div>			
+                </div>
+                <div class="col-sm-2 count-value">
+                    <input id="ssd-val" type="text" />
+                    GB storage
+                </div>
+            </div>
 
-					<tr>
-						<td class="feature-in-list">
-							<p class="feature-in-list-title"> 
-							<i class="fa fa-cloud-upload-alt" aria-hidden="true"></i> Mirroring hot swap
-							</p>
-							<p class="feature-in-list-details">
-							<b>Instant Disaster Recovery</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#mirroring-hot-swap">Feature details</a> <br />
-							Réplication en temps réel des hôtes de production dans une infrastructure distincte. Utilisation d'une adresse IP de basculement unique.
-							</p>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ko"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ko"></div>
-						</td>
-						<td class="check-container text-center">
-							<div class="checked-ok"></div>
-						</td>
-					</tr>
-					
-				</tbody>
-			</table>
-		</div>
-	</div>
-</div>
+            <div class="row">   
+                <div class="col-sm-4">
+                   <label>Software category</label>
+                   <select id="soft-type" >
+                      <option selected="selected" value="cms">CMS</option>   
+                      <option value="ecommerce">eCommerce</option>
+                      <option value="erp">CRM / ERP</option>
+                   </select>
+                </div>
+                
+                <div class="col-sm-4">
+                    <label>Hosting plan</label>   
+                    <select id="plan-type" >
+                      <option selected="selected" value="basic">Basic</option>   
+                      <option value="standard">Standard</option>
+                      <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">		
+                    <span id="srv-count"></span> matching configurations
+                </div>
+            </div>
+           
 
-</div>
+            <div class="row srv-details" style="margin-top: 20px;" >
+                <div class="col-sm-4">   
+                    <div class="bs-component">
+                        <div class="panel panel-default" style="text-align: center; padding: 0; background-color: #89D3CB;">
+                            <h1>Server details</h1>
+                            <p></p>
+                            <p><span class="stat-cost">{{context.cost}} EUR</span> / month</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">   
+                    <div class="bs-component">
+                        <div class="panel panel-default" style="background-color: #89D3CB;">
+                            <div class="panel-heading">
+                                <i style="width: 20px;" class="fa fa-server" aria-hidden="true"></i><label>Ref:</label> <b>{{selected_srv.ref}}</b>					
+                            </div>
+                            <div class="panel-body">
+                                <div><i style="width: 20px;" class="fa fa-microchip" aria-hidden="true"></i><label>CPU:</label> <b>{{selected_srv.cpu_ct}}</b> core(s) @ <b>{{config[context.match_index].cpu_fq}}</b> GHz</div>
+                                <div><i style="width: 20px;" class="fa fa-memory" aria-hidden="true"></i><label>RAM:</label> <b>{{selected_srv.ram}}</b> GB memory</div>		
+                                <div><i style="width: 20px;" class="fa fa-hdd" aria-hidden="true"></i><label>SSD:</label> <b>{{selected_srv.ssd}}</b> GB storage</div>		
+                            </div>
+                        </div>
+                    </div>		
+                </div>
+                <div class="col-sm-4">
+                    <div class="bs-component">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Server requirement estimates
+                            </div>
+                            <div class="panel-body">
+                                <div><i style="width: 20px;" class="fa fa-save" aria-hidden="true"></i><label>Required backup storage:</label> <b>{{context.ssd/2*14}}</b> GB</div>
+                                <div><i style="width: 20px;" class="fa fa-tachometer-alt" aria-hidden="true"></i><label>Max. capacity:</label> <b>{{context.capacity}}</b> visits per second</div>
+                                <div><i style="width: 20px;" class="fa fa-eye" aria-hidden="true"></i><label>Typical use:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (4 * 100000) | number:0}}k</b> visits per month</div>
+                                <div><i style="width: 20px;" class="fa fa-users" aria-hidden="true"></i><label>Max. users:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (80 * 10000)  | number:0}}</b> users</div>
+                            </div>
+                        </div>
+                    </div>		
+                </div>
+                
+            </div>
+           
+            <div class="row srv-details" style="margin-top: 20px;" >
+            
+                <div class="table-responsive compare-table" style="width: 100%;">
+                    <div class="table-responsive" style="width: 100%;">
+                        <table class="comparison-table comparing-gitlab products-page-comparison" style="margin: auto;">
+                            <colgroup>
+                                <col width="40%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+                            </colgroup>
+                            <thead class="affix-top">
+                                <tr>
+                                    <th class="text-left table-title"> Features </th>
+                                    <th class="text-center table-title"> Basic </th>
+                                    <th class="text-center table-title"> Standard </th>
+                                    <th class="text-center table-title"> Premium </th>
+                                </tr>
+                            </thead>
+                            <tbody class="header first">
+                            
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-shield-alt" aria-hidden="true"></i> Anti-DDoS
+                                        </p>
+                                        <p class="feature-in-list-details"> 
+                                        <b>Protection contre les menaces DDoS</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#anti-ddos">Feature details</a> <br />
+                                        Votre infrastructure est protégée contre les attaques par déni de service distribué.							
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-server" aria-hidden="true"></i> Disk Mirroring 
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Système RAID de disques indépendants</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#disk-mirroring">Feature details</a> <br />
+                                        Toutes les données sont répliquées pour éviter la perte de données en cas de défaillance matérielle.							
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+                                
+
+                                
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-lock" aria-hidden="true"></i> SSL certificate
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Certificat SSL Let's encrypt</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#ssl-certificate">Feature details</a> <br />
+                                        Configuration, installation et renouvellement d'un certificat SSL pour une application en HTTPS
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-code-branch" aria-hidden="true"></i> Versioning
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Fichiers de l'instance versionnés comme un tout</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#versioning">Feature details</a><br />
+                                        Toutes les versions de tous les fichiers sont conservées, ce qui permet de revenir facilement à l'état précédent en cas de modification accidentelle.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-chart-bar" aria-hidden="true"></i> Monitoring
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Surveillez l'état de votre environnement</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
+                                        Tous les services et ressources sont surveillés. Une page d'état récapitule le statut de vos serveurs de production.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-heartbeat" aria-hidden="true"></i> Monitoring externe
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Votre environnement est surveillé 24h / 24 et 7j / 7</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
+                                        Un service externe vérifie en permanence l'accessibilité du site. En cas de défaillance, une alerte est envoyée automatiquement.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ko"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-save" aria-hidden="true"></i> Backups
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Sauvegardes sur un serveur de localisation distinct </b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#backups">Feature details</a> <br />
+                                        Chaque jour, votre base de données de production est sauvegardée et conservée pendant 4 mois.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ko"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+
+
+                                
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-user-lock" aria-hidden="true"></i> Preview mode
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Contrôle de l'indexation indésirable</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#preview-mode">Feature details</a> <br />
+                                        Empêchez les robots d'accéder aux instances qui ne sont pas prêtes pour réduire l'impact sur la qualité du référencemen SEO.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ko"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-cogs" aria-hidden="true"></i> Maintenance mode
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Mettez facilement votre instance en pause</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#maintenance-mode">Feature details</a><br />
+                                        Placez votre site Web en maintenance et évitez les modifications indésirables lors d'une phase de transition.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ko"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-cloud-upload-alt" aria-hidden="true"></i> Mirroring hot swap
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Instant Disaster Recovery</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#mirroring-hot-swap">Feature details</a> <br />
+                                        Réplication en temps réel des hôtes de production dans une infrastructure distincte. Utilisation d'une adresse IP de basculement unique.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ko"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ko"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
    
 </body>
 </html>
