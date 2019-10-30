@@ -185,16 +185,18 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
             <div class=owl-stage-outer>
                 <div class=owl-stage style="transform:translate3d(0,0,0);transition:all 0s ease 0s;width:1872px">
                     <div class="owl-item active" style="idth:195px;margin-right:0">
-                    <a href="/sections">
+                    
                         <div class="category-icon-title text-center">
+                        <a href="/sections">
                             <div class=category-icon>
                                 <i class="text-gradiant flaticon-list"></i>
                             </div>
                             <div class=category-title>
                                 <h4>Agile &amp; PM</h4>
                             </div> 
+                        </a>
                         </div>
-                    </a>
+
                     </div>
                     <div class="owl-item active" style="width:195px;margin-right:0">
                     <a href="/sections">                    
