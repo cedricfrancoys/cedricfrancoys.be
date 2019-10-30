@@ -187,14 +187,14 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
                     <div class="owl-item active" style="idth:195px;margin-right:0">
                     
                         <div class="category-icon-title text-center">
-                        <a href="/sections">
+                        
                             <div class=category-icon>
-                                <i class="text-gradiant flaticon-list"></i>
+                                <a href="/sections"><i class="text-gradiant flaticon-list"></i></a>
                             </div>
                             <div class=category-title>
-                                <h4>Agile &amp; PM</h4>
+                                <h4><a href="/sections">Agile &amp; PM</a></h4>
                             </div> 
-                        </a>
+
                         </div>
 
                     </div>
