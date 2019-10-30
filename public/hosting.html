@@ -117,10 +117,10 @@ div.panel label {
 // global vars
 // cpu_ct cpu_fq, ram, ssd, bw  
 var config = {
-    1:  {ref: 'S1-2', cpu_ct: 1, cpu_fq: 2.4,ram: 2,ssd: 10,bw: 100, cost: {basic: 6, standard: 19.99, premium: 29.99}},
-    2:  {ref: 'S1-4', cpu_ct: 1, cpu_fq: 2.4,ram: 4,ssd: 20,bw: 100, cost: {basic: 12, standard: 29.99, premium: 44.99}},
-    3:  {ref: 'S1-8', cpu_ct: 2, cpu_fq: 2.4,ram: 8,ssd: 40,bw: 100, cost: {basic: 26, standard: 59.99, premium: 89.99}},
-    4:  {ref: 'B2-7', cpu_ct: 2, cpu_fq: 2.3,ram: 7,ssd: 50,bw: 250, cost: {basic: 44, standard: 64, premium: 96}},
+    1:  {ref: 'S1-2', cpu_ct: 1, cpu_fq: 2.4,ram: 2,ssd: 10,bw: 100, cost: {basic: 9.99, standard: 19.99, premium: 29.99}},
+    2:  {ref: 'S1-4', cpu_ct: 1, cpu_fq: 2.4,ram: 4,ssd: 20,bw: 100, cost: {basic: 14.99, standard: 29.99, premium: 44.99}},
+    3:  {ref: 'S1-8', cpu_ct: 2, cpu_fq: 2.4,ram: 8,ssd: 40,bw: 100, cost: {basic: 29.99, standard: 59.99, premium: 89.99}},
+    4:  {ref: 'B2-7', cpu_ct: 2, cpu_fq: 2.3,ram: 7,ssd: 50,bw: 250, cost: {basic: 44.99, standard: 64.99, premium: 99.99}},
     5:  {ref: 'C2-7', cpu_ct: 2, cpu_fq: 3.1,ram: 7,ssd: 50,bw: 250, cost: {basic: 64, standard: 84, premium: 126}},
     6:  {ref: 'R2-15', cpu_ct: 2, cpu_fq: 2.4,ram: 15,ssd: 50,bw: 250, cost: {basic: 64, standard: 84, premium: 126}},
     7:  {ref: 'R2-30', cpu_ct: 2, cpu_fq: 2.4,ram: 30,ssd: 50,bw: 250, cost: {basic: 74, standard: 94, premium: 141}},
@@ -334,20 +334,7 @@ $(document).ready(function() {
                 
                 <div class="collapse navbar-collapse" uib-collapse="rootCtrl.isNavCollapsed">
                     <ul class="nav navbar-nav">        
-                        <li><a href="https://doc.digital-facile.yb.run/CheckUp">Comment fonctionne le test ?</a></li>
-                        <li class="dropdown" uib-dropdown>
-                            <a role="button" uib-dropdown-toggle>
-                                Détail des tests <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu" uib-dropdown-menu>
-                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#performance">Performance</a></li>
-                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#securite">Sécurité</a></li>
-                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#adaptabilite">Adaptabilité</a></li>
-                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#integrabilite">Intégrabilité</a></li>
-                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#visibilite">Visibiltié</a></li>
-                                <li><a href="https://doc.digital-facile.yb.run/CheckUp/#legalite">Légalité</a></li>                        
-                            </ul>
-                        </li>                
+                        <li><a href="https://digital-facile.cedricfrancoys.be/">Tous les services</a></li>
                         <li><a href="mailto:bonjour@cedricfrancoys.be">Contact</a></li>
                     </ul>    
                 </div>
@@ -429,7 +416,7 @@ $(document).ready(function() {
                 <div class="col-sm-4">   
                     <div class="bs-component">
                         <div class="panel panel-default" style="text-align: center; padding: 0; background-color: #89D3CB;">
-                            <p><span class="stat-cost">{{context.cost}} EUR</span> / month</p>
+                            <p style="display: block; height: 60px; margin-top: 20px;"><span class="stat-cost">{{context.cost}} EUR</span> / month</p>
 
                         </div>
                     </div>
@@ -490,7 +477,7 @@ $(document).ready(function() {
                                         <i class="fa fa-shield-alt" aria-hidden="true"></i> Anti-DDoS
                                         </p>
                                         <p class="feature-in-list-details"> 
-                                        <b>Protection contre les menaces DDoS</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#anti-ddos">Feature details</a> <br />
+                                        <b>Protection contre les menaces DDoS</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#anti-ddos">Feature details</a> <br />
                                         Votre infrastructure est protégée contre les attaques par déni de service distribué.							
                                         </p>
                                     </td>
@@ -511,7 +498,7 @@ $(document).ready(function() {
                                         <i class="fa fa-server" aria-hidden="true"></i> Disk Mirroring 
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Système RAID de disques indépendants</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#disk-mirroring">Feature details</a> <br />
+                                        <b>Système RAID de disques indépendants</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#disk-mirroring">Feature details</a> <br />
                                         Toutes les données sont répliquées pour éviter la perte de données en cas de défaillance matérielle.							
                                         </p>
                                     </td>
@@ -534,7 +521,7 @@ $(document).ready(function() {
                                         <i class="fa fa-lock" aria-hidden="true"></i> SSL certificate
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Certificat SSL Let's encrypt</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#ssl-certificate">Feature details</a> <br />
+                                        <b>Certificat SSL Let's encrypt</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#certificat-ssl">Feature details</a> <br />
                                         Configuration, installation et renouvellement d'un certificat SSL pour une application en HTTPS
                                         </p>
                                     </td>
@@ -555,7 +542,7 @@ $(document).ready(function() {
                                         <i class="fa fa-code-branch" aria-hidden="true"></i> Versioning
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Fichiers de l'instance versionnés comme un tout</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#versioning">Feature details</a><br />
+                                        <b>Fichiers de l'instance versionnés comme un tout</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#versioning">Feature details</a><br />
                                         Toutes les versions de tous les fichiers sont conservées, ce qui permet de revenir facilement à l'état précédent en cas de modification accidentelle.
                                         </p>
                                     </td>
@@ -576,7 +563,7 @@ $(document).ready(function() {
                                         <i class="fa fa-chart-bar" aria-hidden="true"></i> Monitoring
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Surveillez l'état de votre environnement</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
+                                        <b>Surveillez l'état de votre environnement</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#monitoring-interne">Feature details</a><br />
                                         Tous les services et ressources sont surveillés. Une page d'état récapitule le statut de vos serveurs de production.
                                         </p>
                                     </td>
@@ -597,7 +584,7 @@ $(document).ready(function() {
                                         <i class="fa fa-heartbeat" aria-hidden="true"></i> Monitoring externe
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Votre environnement est surveillé 24h / 24 et 7j / 7</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
+                                        <b>Votre environnement est surveillé 24h / 24 et 7j / 7</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#monitoring-externe">Feature details</a><br />
                                         Un service externe vérifie en permanence l'accessibilité du site. En cas de défaillance, une alerte est envoyée automatiquement.
                                         </p>
                                     </td>
@@ -618,7 +605,7 @@ $(document).ready(function() {
                                         <i class="fa fa-save" aria-hidden="true"></i> Backups
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Sauvegardes sur un serveur de localisation distinct </b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#backups">Feature details</a> <br />
+                                        <b>Sauvegardes sur un serveur de localisation distinct </b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#backups">Feature details</a> <br />
                                         Chaque jour, votre base de données de production est sauvegardée et conservée pendant 4 mois.
                                         </p>
                                     </td>
@@ -641,7 +628,7 @@ $(document).ready(function() {
                                         <i class="fa fa-user-lock" aria-hidden="true"></i> Preview mode
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Contrôle de l'indexation indésirable</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#preview-mode">Feature details</a> <br />
+                                        <b>Contrôle de l'indexation indésirable</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#preview-mode">Feature details</a> <br />
                                         Empêchez les robots d'accéder aux instances qui ne sont pas prêtes pour réduire l'impact sur la qualité du référencemen SEO.
                                         </p>
                                     </td>
@@ -662,7 +649,7 @@ $(document).ready(function() {
                                         <i class="fa fa-cogs" aria-hidden="true"></i> Maintenance mode
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Mettez facilement votre instance en pause</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#maintenance-mode">Feature details</a><br />
+                                        <b>Mettez facilement votre instance en pause</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#maintenance-mode">Feature details</a><br />
                                         Placez votre site Web en maintenance et évitez les modifications indésirables lors d'une phase de transition.
                                         </p>
                                     </td>
@@ -683,7 +670,7 @@ $(document).ready(function() {
                                         <i class="fa fa-cloud-upload-alt" aria-hidden="true"></i> Mirroring hot swap
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Instant Disaster Recovery</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#mirroring-hot-swap">Feature details</a> <br />
+                                        <b>Instant Disaster Recovery</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#mirroring-hot-swap">Feature details</a> <br />
                                         Réplication en temps réel des hôtes de production dans une infrastructure distincte. Utilisation d'une adresse IP de basculement unique.
                                         </p>
                                     </td>
