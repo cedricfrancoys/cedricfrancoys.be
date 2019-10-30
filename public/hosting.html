@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html ng-app="project" ng-controller="rootController as rootCtrl">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">      
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">	
+
+	
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style>
+.count-min {
+	position: absolute; 
+	left: 15px;
+}
+.count-max {
+	position: absolute; 
+	right: 15px;
+}
+
+.count-slider {
+	height: 35px;
+}
+
+.count-value input {
+	width: 30px;
+    border-radius: 4px;
+    border: solid 1px lightgrey;	
+	padding-left: 2px;
+}
+
+
+.check-container .checked-ok {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><path fill='%230b7e72' d='m989.95 153.95c-.056.06-.112.099-.164.145-.054.047-.103.1-.161.14-.081.058-.17.101-.258.145-.034.017-.066.041-.102.056-.112.048-.227.081-.344.108-.016.003-.028.01-.043.013-.133.027-.267.041-.402.041-.122 0-.243-.011-.363-.033-.032-.006-.063-.019-.095-.027-.087-.02-.173-.04-.257-.072-.063-.024-.121-.06-.182-.09-.051-.026-.103-.046-.152-.076-.057-.035-.107-.08-.159-.12-.049-.037-.1-.068-.146-.11l-3.627-3.339c-.812-.748-.865-2.01-.117-2.826.748-.811 2.01-.866 2.826-.117l2.161 1.989 5.325-5.74c.752-.81 2.02-.856 2.827-.106.809.752.857 2.02.105 2.827l-6.672 7.192m-14.947-4.952c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15' transform='translate(-975-134)'></path></svg>");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+.check-container .checked-ko {
+	/* display: inline-block;*/
+	display: none;
+	width: 30px;
+	height: 30px;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><path fill='%23923e00' d='m1115.66 151.83c.781.781.781 2.047 0 2.828-.391.391-.902.586-1.414.586-.512 0-1.024-.195-1.414-.586l-2.828-2.828-2.828 2.828c-.391.391-.903.586-1.414.586-.512 0-1.024-.195-1.415-.586-.781-.781-.781-2.047 0-2.828l2.829-2.829-2.829-2.828c-.781-.781-.781-2.048 0-2.828.782-.782 2.047-.782 2.829 0l2.828 2.828 2.828-2.828c.781-.782 2.047-.782 2.828 0 .781.78.781 2.047 0 2.828l-2.828 2.828 2.828 2.829m-20.656-2.829c0 8.285 6.716 15 15 15 8.284 0 15-6.715 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15' transform='translate(-1095-134)'></path></svg>");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+#srv-count {
+	font-weight: bold;
+}
+.srv-details .stat-cost {
+	font-size: 30px;
+	font-weight: bold;
+}
+.srv-details label {
+	font-weight: normal;
+}
+div.panel {
+	height: 140px;
+}
+
+div.panel .panel-body {
+	padding-left: 30px;
+}
+
+div.panel label {
+	margin-bottom: 0;
+}
+
+.comparison-table .table-title {
+	font-size: 25px;
+}
+
+.feature-in-list .feature-in-list-title {
+	font-weight: bold;
+	margin: 0;
+}
+
+.feature-in-list .feature-in-list-details {
+	font-size: 11px;
+}
+
+.feature-in-list .feature-in-list-details b {
+	color: #848484;
+}
+
+.ui-slider-handle {
+	background-color: #0b7e72 !important;
+}
+</style>	
+<script type="text/javascript">
+// global vars
+// cpu_ct cpu_fq, ram, ssd, bw  
+var config = {
+    1:  {ref: 'S1-2', cpu_ct: 1, cpu_fq: 2.4,ram: 2,ssd: 10,bw: 100, cost: {basic: 6, standard: 19.99, premium: 29.99}},
+    2:  {ref: 'S1-4', cpu_ct: 1, cpu_fq: 2.4,ram: 4,ssd: 20,bw: 100, cost: {basic: 12, standard: 29.99, premium: 44.99}},
+    3:  {ref: 'S1-8', cpu_ct: 2, cpu_fq: 2.4,ram: 8,ssd: 40,bw: 100, cost: {basic: 26, standard: 59.99, premium: 89.99}},
+    4:  {ref: 'B2-7', cpu_ct: 2, cpu_fq: 2.3,ram: 7,ssd: 50,bw: 250, cost: {basic: 44, standard: 64, premium: 96}},
+    5:  {ref: 'C2-7', cpu_ct: 2, cpu_fq: 3.1,ram: 7,ssd: 50,bw: 250, cost: {basic: 64, standard: 84, premium: 126}},
+    6:  {ref: 'R2-15', cpu_ct: 2, cpu_fq: 2.4,ram: 15,ssd: 50,bw: 250, cost: {basic: 64, standard: 84, premium: 126}},
+    7:  {ref: 'R2-30', cpu_ct: 2, cpu_fq: 2.4,ram: 30,ssd: 50,bw: 250, cost: {basic: 74, standard: 94, premium: 141}},
+    8:  {ref: 'B2-15', cpu_ct: 4, cpu_fq: 2.3,ram: 25,ssd: 100,bw: 250, cost: {basic: 84, standard: 108, premium: 162}},
+    9:  {ref: 'C2-15', cpu_ct: 4, cpu_fq: 3.1,ram: 15,ssd: 100,bw: 250, cost: {basic: 124, standard: 148, premium: 222}},
+    10: {ref: 'R2-60', cpu_ct: 4, cpu_fq: 2.4,ram: 60,ssd: 100,bw: 250, cost: {basic: 144, standard: 168, premium: 252}},
+    11: {ref: 'B2-30', cpu_ct: 8, cpu_fq: 2.3,ram: 30,ssd: 200,bw: 500, cost: {basic: 170, standard: 250, premium: 375}},
+    12: {ref: 'C2-30', cpu_ct: 8, cpu_fq: 3.1,ram: 30,ssd: 200,bw: 500, cost: {basic: 250, standard: 330, premium: 495}},
+    13: {ref: 'R2-120', cpu_ct: 8, cpu_fq: 2.4,ram: 120,ssd: 200,bw: 250, cost: {basic: 270, standard: 370, premium: 555}},
+    14: {ref: 'C2-60', cpu_ct: 16, cpu_fq: 3.1,ram: 60,ssd: 400,bw: 250, cost: {basic: 490, standard: 570, premium: 855}},
+    15: {ref: 'C2-120', cpu_ct: 32, cpu_fq: 3.1,ram: 120,ssd: 400,bw: 500, cost: {basic: 970, standard: 1050, premium: 1575}}
+};
+  
+var soft_cat = {
+	cms: 		{mipr: 64000, ram: 0.05},
+	ecommerce: 	{mipr: 92000, ram: 0.06},
+	erp: 		{mipr: 130000, ram: 0.2}
+};
+
+
+
+// Instanciate angular module
+var project = angular.module('project', [
+    // dependencies
+])
+.controller('rootController', [
+'$rootScope', 
+'$scope',
+'$location',
+'$window',
+'$http',
+function($rootScope, $scope, $location, $window, $http) {
+	console.log('root controller');
+
+	var ctrl = this;
+	// inject global var
+	$scope.config = $window.config;
+	$scope.soft_cat = $window.soft_cat;
+	
+	// @init context
+	$scope.context = {};
+	$scope.selected_srv = {};
+}
+])
+// allow communication / sync between jQuery and AngularJS
+.directive('body', function(){
+	return { 
+	  restrict: 'E',
+	  link: function($scope, $element){
+		  $element.on('modelUpdate', function(event, data){
+			console.log('model update');
+
+			var cost_min = 0;
+			if(data.match_index >= 0) {
+				$scope.selected_srv = $scope.config[data.match_index];
+				var capacity_cpu = $scope.selected_srv.cpu_ct * $scope.selected_srv.cpu_fq * 40000 / $scope.soft_cat[data.soft_type].mipr;
+				var capacity_ram = $scope.selected_srv.ram / $scope.soft_cat[data.soft_type].ram;
+				var capacity = Math.min(capacity_cpu, capacity_ram);
+				data.capacity = capacity.toFixed(1);
+				cost_min = $scope.config[data.match_index].cost[data.plan_type];
+				data.cost = cost_min.toFixed(2);
+				
+				$scope.context = data;			
+				$scope.$apply();				
+			}
+			
+			
+			console.log($scope.context);			
+		  });
+		}
+	};
+});
+
+
+
+  
+  
+
+  
+$(document).ready(function() {
+    var servers = {
+        CPU_CT: [],
+        CPU_FQ: [],
+        RAM:    [],
+        SSD:    [],
+        BW:     []    
+    };
+    
+    for(let i in config) {        
+        var j = config[i];
+        servers.CPU_CT[j['cpu_ct']] = true;
+        servers.CPU_FQ[j['cpu_fq']] = true;
+        servers.RAM[j['ram']] = true;
+        servers.SSD[j['ssd']] = true;
+        servers.BW[j['bw']] = true;
+    }
+
+
+    var valMaps = {
+        cpu: [],
+        ram: [],
+        ssd: []
+    };
+    for(let i in servers.CPU_CT) {
+        valMaps.cpu.push(i);
+    }
+    for(let i in servers.RAM) {
+        valMaps.ram.push(i);
+    }
+    for(let i in servers.SSD) {
+        valMaps.ssd.push(i);
+    }
+    
+	console.log(valMaps);
+
+	$("#cpu-min").text(valMaps.cpu[0]);
+	$("#cpu-max").text(valMaps.cpu[valMaps.cpu.length-1]);
+	$("#ram-min").text(valMaps.ram[0]);
+	$("#ram-max").text(valMaps.ram[valMaps.ram.length-1]);
+	$("#ssd-min").text(valMaps.ssd[0]);
+	$("#ssd-max").text(valMaps.ssd[valMaps.ssd.length-1]);
+               
+	$('#cpu-val').val(valMaps.cpu[0]);
+	$('#ram-val').val(valMaps.ram[0]);
+	$('#ssd-val').val(valMaps.ssd[0]);	 
+	 
+	$(".slider").each(function() {
+		var $this = $(this);
+
+		var name = $this.attr('id').split("-").shift();
+		console.log(name);
+		$this.slider({
+			max: valMaps[name].length - 1,
+			slide: function(event, ui) {
+			console.log(ui);
+				$('#'+name+"-val").val(valMaps[name][ui.value]);
+				
+				var cpu = $('#cpu-val').val();
+				var ram = $('#ram-val').val();
+				var ssd = $('#ssd-val').val();
+
+				var matches = [];
+				var cost_min = -1;
+				var match_index = -1;
+				// find first matching configuration
+				for(let i in config) {        
+					var j = config[i];
+					if(j['cpu_ct'] >= cpu && j['ram'] >= ram && j['ssd'] >= ssd) {
+
+						matches.push(i);
+						if(j['cost'] < cost_min || cost_min == -1) {
+							cost_min = j['cost'];
+							match_index = i;
+						}
+					}
+				}
+				$('#srv-count').text(''+matches.length);
+					
+				var soft_type = $( "#soft-type" ).val();
+				var plan_type = $( "#plan-type" ).val();
+				
+				// trigger a angularJS update
+				$("body").trigger('modelUpdate', {match_index: match_index, plan_type: plan_type, soft_type: soft_type, cpu: cpu, ram: ram, ssd: ssd});				
+			}            
+		});
+		
+		// init 
+		$this.slider('option', 'slide').call($this, event, {value: 0});
+	});
+
+	$( "#soft-type" ).selectmenu().on('selectmenuchange', function() {
+		$(".slider").each(function() {
+			var $this = $(this);	
+			$this.slider('option', 'slide').call($this, event, {value: $this.slider("option", "value")});	
+		});			
+	});
+	
+	$( "#plan-type" ).selectmenu().on('selectmenuchange', function() {
+		$(".slider").each(function() {	
+			var $this = $(this);	
+			$this.slider('option', 'slide').call($this, event, {value: $this.slider("option", "value")});		
+		});
+	});
+
+	
+     
+});
+
+</script>
+
+</head>
+
+<body >
+
+<div class="container">
+
+    <nav role="navigation">
+
+        <div class="nav navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="rootCtrl.isNavCollapsed = !rootCtrl.isNavCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="padding: 7px;"><img style="height: 35px;" src="/packages/blog/assets/img/digital_facile_logo_inline.png" /></a>			
+        </div>
+        
+        <div class="collapse navbar-collapse" uib-collapse="rootCtrl.isNavCollapsed">
+            <ul class="nav navbar-nav">        
+                <li><a href="https://doc.digital-facile.yb.run/CheckUp">Comment fonctionne le test ?</a></li>
+                <li class="dropdown" uib-dropdown>
+                    <a role="button" uib-dropdown-toggle>
+                        Détail des tests <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu>
+                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#performance">Performance</a></li>
+                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#securite">Sécurité</a></li>
+                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#adaptabilite">Adaptabilité</a></li>
+                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#integrabilite">Intégrabilité</a></li>
+                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#visibilite">Visibiltié</a></li>
+                        <li><a href="https://doc.digital-facile.yb.run/CheckUp/#legalite">Légalité</a></li>                        
+                    </ul>
+                </li>                
+                <li><a href="mailto:bonjour@cedricfrancoys.be">Contact</a></li>
+            </ul>    
+        </div>
+        
+    </nav>
+    
+</div>
+
+<div class="container" style="margin-top: 20px;">
+
+   <div class="col-sm-12">
+        <div class="col-sm-2"><b>CPU</b></div>
+        <div class="col-sm-8 count-slider" >
+			<div class="slider" id="cpu-slider"></div>
+			<div id="cpu-min" class="count-min" ></div>
+			<div id="cpu-max" class="count-max"></div>
+		</div>
+        <div class="col-sm-2 count-value">
+			<input id="cpu-val" type="text" />
+			processor(s)
+		</div>
+   </div>
+
+
+   <div class="col-sm-12">
+        <div class="col-sm-2"><b>RAM</b></div>
+        <div class="col-sm-8 count-slider">
+			<div class="slider" id="ram-slider"></div>
+			<div id="ram-min" class="count-min" ></div>
+			<div id="ram-max" class="count-max"></div>			
+		</div>
+        <div class="col-sm-2 count-value">
+			<input id="ram-val" type="text" />
+			GB memory
+		</div>
+   </div>
+   
+
+	<div class="col-sm-12">
+		<div class="col-sm-2"><b>SSD</b></div>
+		<div class="col-sm-8 count-slider">
+			<div class="slider" id="ssd-slider"></div>
+			<div id="ssd-min" class="count-min" ></div>
+			<div id="ssd-max" class="count-max"></div>			
+		</div>
+		<div class="col-sm-2 count-value">
+			<input id="ssd-val" type="text" />
+			GB storage
+		</div>
+	</div>
+
+	<div class="row">   
+		<div class="col-sm-4">
+		   <label>Software category</label>
+		   <select id="soft-type" >
+			  <option selected="selected" value="cms">CMS</option>   
+			  <option value="ecommerce">eCommerce</option>
+			  <option value="erp">CRM / ERP</option>
+		   </select>
+		</div>
+		
+		<div class="col-sm-4">
+			<label>Hosting plan</label>   
+			<select id="plan-type" >
+			  <option selected="selected" value="basic">Basic</option>   
+			  <option value="standard">Standard</option>
+			  <option value="premium">Premium</option>
+			</select>
+		</div>
+		<div class="col-sm-4">		
+			<span id="srv-count"></span> matching configurations
+		</div>
+	</div>
+   
+
+	<div class="row srv-details" style="margin-top: 20px;" >
+		<div class="col-sm-4">   
+			<div class="bs-component">
+				<div class="panel panel-default" style="text-align: center; padding: 0; background-color: #89D3CB;">
+					<h1>Server details</h1>
+					<p></p>
+					<p><span class="stat-cost">{{context.cost}} EUR</span> / month</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">   
+			<div class="bs-component">
+				<div class="panel panel-default" style="background-color: #89D3CB;">
+					<div class="panel-heading">
+						<i style="width: 20px;" class="fa fa-server" aria-hidden="true"></i><label>Ref:</label> <b>{{selected_srv.ref}}</b>					
+					</div>
+					<div class="panel-body">
+						<div><i style="width: 20px;" class="fa fa-microchip" aria-hidden="true"></i><label>CPU:</label> <b>{{selected_srv.cpu_ct}}</b> core(s) @ <b>{{config[context.match_index].cpu_fq}}</b> GHz</div>
+						<div><i style="width: 20px;" class="fa fa-memory" aria-hidden="true"></i><label>RAM:</label> <b>{{selected_srv.ram}}</b> GB memory</div>		
+						<div><i style="width: 20px;" class="fa fa-hdd" aria-hidden="true"></i><label>SSD:</label> <b>{{selected_srv.ssd}}</b> GB storage</div>		
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="col-sm-4">
+			<div class="bs-component">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Server requirement estimates
+					</div>
+					<div class="panel-body">
+						<div><i style="width: 20px;" class="fa fa-save" aria-hidden="true"></i><label>Required backup storage:</label> <b>{{context.ssd/2*14}}</b> GB</div>
+						<div><i style="width: 20px;" class="fa fa-tachometer-alt" aria-hidden="true"></i><label>Max. capacity:</label> <b>{{context.capacity}}</b> visits per second</div>
+						<div><i style="width: 20px;" class="fa fa-eye" aria-hidden="true"></i><label>Typical use:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (4 * 100000) | number:0}}k</b> visits per month</div>
+						<div><i style="width: 20px;" class="fa fa-users" aria-hidden="true"></i><label>Max. users:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (80 * 10000)  | number:0}}</b> users</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		
+	</div>
+   
+	<div class="row srv-details" style="margin-top: 20px;" >
+	
+	<div class="table-responsive compare-table" style="width: 100%;">
+		<div class="table-responsive" style="width: 100%;">
+			<table class="comparison-table comparing-gitlab products-page-comparison" style="margin: auto;">
+				<colgroup>
+					<col width="40%">
+					<col width="15%">
+					<col width="15%">
+					<col width="15%">
+					<col width="15%">
+				</colgroup>
+				<thead class="affix-top">
+					<tr>
+						<th class="text-left table-title"> Features </th>
+						<th class="text-center table-title"> Basic </th>
+						<th class="text-center table-title"> Standard </th>
+						<th class="text-center table-title"> Premium </th>
+					</tr>
+				</thead>
+				<tbody class="header first">
+				
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-shield-alt" aria-hidden="true"></i> Anti-DDoS
+							</p>
+							<p class="feature-in-list-details"> 
+							<b>Protection contre les menaces DDoS</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#anti-ddos">Feature details</a> <br />
+							Votre infrastructure est protégée contre les attaques par déni de service distribué.							
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-server" aria-hidden="true"></i> Disk Mirroring 
+							</p>
+							<p class="feature-in-list-details">
+							<b>Système RAID de disques indépendants</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#disk-mirroring">Feature details</a> <br />
+							Toutes les données sont répliquées pour éviter la perte de données en cas de défaillance matérielle.							
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+					
+
+					
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-lock" aria-hidden="true"></i> SSL certificate
+							</p>
+							<p class="feature-in-list-details">
+							<b>Certificat SSL Let's encrypt</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#ssl-certificate">Feature details</a> <br />
+							Configuration, installation et renouvellement d'un certificat SSL pour une application en HTTPS
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-code-branch" aria-hidden="true"></i> Versioning
+							</p>
+							<p class="feature-in-list-details">
+							<b>Fichiers de l'instance versionnés comme un tout</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#versioning">Feature details</a><br />
+							Toutes les versions de tous les fichiers sont conservées, ce qui permet de revenir facilement à l'état précédent en cas de modification accidentelle.
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-chart-bar" aria-hidden="true"></i> Monitoring
+							</p>
+							<p class="feature-in-list-details">
+							<b>Surveillez l'état de votre environnement</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
+							Tous les services et ressources sont surveillés. Une page d'état récapitule le statut de vos serveurs de production.
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-heartbeat" aria-hidden="true"></i> Monitoring externe
+							</p>
+							<p class="feature-in-list-details">
+							<b>Votre environnement est surveillé 24h / 24 et 7j / 7</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#monitoring">Feature details</a><br />
+							Un service externe vérifie en permanence l'accessibilité du site. En cas de défaillance, une alerte est envoyée automatiquement.
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ko"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-save" aria-hidden="true"></i> Backups
+							</p>
+							<p class="feature-in-list-details">
+							<b>Sauvegardes sur un serveur de localisation distinct </b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#backups">Feature details</a> <br />
+							Chaque jour, votre base de données de production est sauvegardée et conservée pendant 4 mois.
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ko"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+
+
+					
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-user-lock" aria-hidden="true"></i> Preview mode
+							</p>
+							<p class="feature-in-list-details">
+							<b>Contrôle de l'indexation indésirable</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#preview-mode">Feature details</a> <br />
+							Empêchez les robots d'accéder aux instances qui ne sont pas prêtes pour réduire l'impact sur la qualité du référencemen SEO.
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ko"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-cogs" aria-hidden="true"></i> Maintenance mode
+							</p>
+							<p class="feature-in-list-details">
+							<b>Mettez facilement votre instance en pause</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#maintenance-mode">Feature details</a><br />
+							Placez votre site Web en maintenance et évitez les modifications indésirables lors d'une phase de transition.
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ko"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="feature-in-list">
+							<p class="feature-in-list-title"> 
+							<i class="fa fa-cloud-upload-alt" aria-hidden="true"></i> Mirroring hot swap
+							</p>
+							<p class="feature-in-list-details">
+							<b>Instant Disaster Recovery</b> - <a target="_blank" href="http://doc.yesbabylon.com/customer/hosting/features/#mirroring-hot-swap">Feature details</a> <br />
+							Réplication en temps réel des hôtes de production dans une infrastructure distincte. Utilisation d'une adresse IP de basculement unique.
+							</p>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ko"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ko"></div>
+						</td>
+						<td class="check-container text-center">
+							<div class="checked-ok"></div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+</div>
+   
+</body>
+</html>
