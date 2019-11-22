@@ -441,7 +441,7 @@ $(document).ready(function() {
                                 <div><i style="width: 20px;" class="fa fa-save" aria-hidden="true"></i><label>Required backup storage:</label> <b>{{context.ssd/2*14}}</b> GB</div>
                                 <div><i style="width: 20px;" class="fa fa-tachometer-alt" aria-hidden="true"></i><label>Max. capacity:</label> <b>{{context.capacity}}</b> visits per second</div>
                                 <div><i style="width: 20px;" class="fa fa-eye" aria-hidden="true"></i><label>Typical use:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (4 * 100000) | number:0}}k</b> visits per month</div>
-                                <div><i style="width: 20px;" class="fa fa-users" aria-hidden="true"></i><label>Max. users:</label> up to <b>{{context.capacity * 60 * 60 * 24 * 30 / (80 * 10000)  | number:0}}</b> users</div>
+                                <div><i style="width: 20px;" class="fa fa-users" aria-hidden="true"></i><label>Max. users:</label> up to <b>{{(context.capacity * 60 * 60 * 24 * 30 / (80 * 10000))-2  | number:0}}</b> users</div>
                             </div>
                         </div>
                     </div>		
@@ -498,8 +498,8 @@ $(document).ready(function() {
                                         <i class="fa fa-server" aria-hidden="true"></i> Disk Mirroring 
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Système RAID de disques indépendants</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#disk-mirroring">Plus de détails</a> <br />
-                                        Toutes les données sont répliquées pour éviter la perte de données en cas de défaillance matérielle.							
+                                        <b>Protection contre les pannes matérielles - disques RAID</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#disk-mirroring">Plus de détails</a> <br />
+                                        Toutes les données sont répliquées pour éviter la perte de données en cas de défaillance d'un disque dur.
                                         </p>
                                     </td>
                                     <td class="check-container text-center">
@@ -521,7 +521,7 @@ $(document).ready(function() {
                                         <i class="fa fa-lock" aria-hidden="true"></i> SSL certificate
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Certificat SSL Let's encrypt</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#certificat-ssl">Plus de détails</a> <br />
+                                        <b>Certificat SSL DV - Let's encrypt</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#certificat-ssl">Plus de détails</a> <br />
                                         Configuration, installation et renouvellement d'un certificat SSL pour une application en HTTPS
                                         </p>
                                     </td>
@@ -542,7 +542,7 @@ $(document).ready(function() {
                                         <i class="fa fa-code-branch" aria-hidden="true"></i> Versioning
                                         </p>
                                         <p class="feature-in-list-details">
-                                        <b>Fichiers de l'instance versionnés comme un tout</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#versioning">Plus de détails</a><br />
+                                        <b>Suivi des versions de l'instance </b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#versioning">Plus de détails</a><br />
                                         Toutes les versions de tous les fichiers sont conservées, ce qui permet de revenir facilement à l'état précédent en cas de modification accidentelle.
                                         </p>
                                     </td>
@@ -556,7 +556,26 @@ $(document).ready(function() {
                                         <div class="checked-ok"></div>
                                     </td>
                                 </tr>
-                                
+                                <tr>
+                                    <td class="feature-in-list">
+                                        <p class="feature-in-list-title"> 
+                                        <i class="fa fa-save" aria-hidden="true"></i> Backups
+                                        </p>
+                                        <p class="feature-in-list-details">
+                                        <b>Sauvegardes automatiques </b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#backups">Plus de détails</a> <br />
+                                        Chaque jour, votre base de données de production est sauvegardée. Un historique d'au moins 14 points de restauration est conservée pendant 4 mois.
+                                        </p>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                    <td class="check-container text-center">
+                                        <div class="checked-ok"></div>
+                                    </td>
+                                </tr>                                
                                 <tr>
                                     <td class="feature-in-list">
                                         <p class="feature-in-list-title"> 
@@ -602,7 +621,7 @@ $(document).ready(function() {
                                 <tr>
                                     <td class="feature-in-list">
                                         <p class="feature-in-list-title"> 
-                                        <i class="fa fa-save" aria-hidden="true"></i> Backups
+                                        <i class="fa fa-cloud-upload-alt" aria-hidden="true"></i> Backups
                                         </p>
                                         <p class="feature-in-list-details">
                                         <b>Sauvegardes sur un serveur de localisation distinct </b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#backups">Plus de détails</a> <br />
@@ -667,7 +686,7 @@ $(document).ready(function() {
                                 <tr>
                                     <td class="feature-in-list">
                                         <p class="feature-in-list-title"> 
-                                        <i class="fa fa-cloud-upload-alt" aria-hidden="true"></i> Mirroring hot swap
+                                        <i class="fa fa-clone" aria-hidden="true"></i> Mirroring hot swap
                                         </p>
                                         <p class="feature-in-list-details">
                                         <b>Instant Disaster Recovery</b> - <a target="_blank" href="https://doc.digital-facile.yb.run/Hosting/#mirroring-hot-swap">Plus de détails</a> <br />
