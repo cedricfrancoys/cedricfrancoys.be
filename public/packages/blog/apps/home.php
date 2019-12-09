@@ -482,6 +482,12 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
         </center>
     </div>
 </section> 
+
+<section id="sponsor" class="sponsor-section">
+    <div class="container">
+        <img src="packages/blog/assets/img/trustpilot.png" width="300" alt="">
+    </div>
+</section>    
  
  <footer>
  
@@ -497,3 +503,5 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
  
  
  <div id=lightboxOverlay class=lightboxOverlay style=display:none></div><div id=lightbox class=lightbox style=display:none><div class=lb-outerContainer></div><div class=lb-dataContainer></div></div><div id=ui-datepicker-div class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div id=ConnectiveDocSignExtentionInstalled data-extension-version=1.0.4></div>
+</body>
+</html> 
