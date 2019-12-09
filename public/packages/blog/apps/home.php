@@ -485,7 +485,7 @@ format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,
 
 <section id="sponsor" class="sponsor-section">
     <div class="container">
-        <img src="packages/blog/assets/img/trustpilot.png" width="300" alt="">
+        <a href="https://www.trustpilot.com/review/cedricfrancoys.be"><img style="display: block; margin: auto;" src="packages/blog/assets/img/trustpilot.png" width="300" alt=""></a>
     </div>
 </section>    
  
