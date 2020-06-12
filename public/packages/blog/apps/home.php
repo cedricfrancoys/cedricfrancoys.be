@@ -58,7 +58,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav menu">
         <li><a href="#">Qui ? </a></li>
-        <li><a href="https://digital-facile.cedricfrancoys.be/">Services</a></li>        
+        <li><a href="https://cedricfrancoys.be/services">Services</a></li>        
         <li><a href="#">Porfolio</a></li>
       </ul>
 
@@ -146,7 +146,7 @@
                 <div class="col-md-4 col-sm-6">
                     <img src="https://cedricfrancoys.be/packages/blog/assets/img/digital_facile_big.png">
                     <div class="genius-btn mt40 mb30 gradient-bg text-center text-uppercase ul-li-block bold-font" style="margin: auto; margin-top: 30px;">
-                        <a href="https://digital-facile.cedricfrancoys.be/">Voir les services</a>
+                        <a href="https://cedricfrancoys.be/services">Voir les services</a>
                     </div>
                 </div>
 
