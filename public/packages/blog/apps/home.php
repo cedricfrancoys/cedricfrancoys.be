@@ -51,7 +51,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" style="font-family: 'Arcade'; color: #2F61A5; font-size: 45px; display: inline-block; padding-top: 23px;">cedricfrancoys.be</a>
+      <a class="navbar-brand" href="#" style="font-family: 'Arcade'; color: #2F61A5; font-size: 45px; display: inline-block; padding-top: 23px; width: 384px;">cedricfrancoys.be</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
