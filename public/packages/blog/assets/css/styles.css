@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: "Arcade";
-    src: url("/packages/blog/assets/fonts/arcade.eot");
-    src: url("/packages/blog/assets/fonts/arcade.woff") format("woff"),url("/packages/blog/assets/fonts/arcade.svg") format("svg");
+    src: url("/packages/blog/assets/fonts/Arcade.eot");
+    src: url("/packages/blog/assets/fonts/Arcade.woff") format("woff"),url("/packages/blog/assets/fonts/Arcade.svg") format("svg");
 }
 
 #course-btn .genius-btn
