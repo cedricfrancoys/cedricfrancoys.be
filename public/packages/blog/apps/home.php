@@ -1,13 +1,15 @@
 <!DOCTYPE html> 
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cédric Françoys</title>
+
+
 <link rel="stylesheet" href="/packages/blog/assets/css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
-<title>Cédric Françoys</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script>
@@ -27,6 +29,7 @@
 
     });
 </script>
+
 </head>
 <body>
  
@@ -62,7 +65,7 @@
       <ul class="nav navbar-nav navbar-right">
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-comment-o"></i> Direct <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-comment-o"></i> Contact<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="tel:+32486152419"><i class="fa fa-phone"></i> +32486152419</a></li>
             <li><a href="mailto:hello@cedricfrancoys.be"><i class="fa fa-envelope-o"></i> hello@cedricfrancoys.be</a></li>            

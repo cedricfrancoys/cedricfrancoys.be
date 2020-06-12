@@ -1,0 +1,562 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cédric Françoys</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+    font-family: 'Roboto';
+}
+
+ul.navbar-nav li > a {
+
+    font-size: 20px;    
+}
+
+ul.navbar-nav.menu li > a {    
+    text-transform: uppercase;    
+}
+
+ul.navbar-nav.menu li > a {
+    font-size: 25px;
+    display: inline-block;
+    border-bottom: solid 1px white;
+    min-width: 130px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
+    color: #2F61A5;
+}
+ul.navbar-nav.menu li > a:hover {
+    border-bottom: solid 1px #2F61A5;
+}
+ul.navbar-nav.menu li {
+    display: none;
+}
+@media (min-width: 992px) {
+    ul.navbar-nav.menu li {
+        display: inline-block;
+    }
+    
+    ul.navbar-nav.menu {
+        margin-left: 30px;
+    }
+    ul.navbar-nav.menu li {
+    }
+
+
+    ul.navbar-nav li > a {
+        line-height: 30px !important;
+    }
+
+    
+}
+
+
+
+
+.ctn-banner {
+    position: relative;
+    background-color: #2F61A5;
+    margin-bottom: 30px;
+    height: 300px;    
+}
+
+.ctn-banner::after {
+    display: block;
+    position: absolute;
+    border: solid transparent;
+    border-color: transparent;
+    content: '';
+    pointer-events: none;
+    z-index: 1;
+    border-top-color: #2F61A5;
+    border-width: 18px 30px 0;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 18px;
+    border-style: solid;
+    background-color: white;
+    color: white;
+}
+
+.ctn-banner .container {
+    display: flex;
+    padding: 0; 
+    height: 100%;
+}
+
+.ctn-banner .container .row {
+    display: flex;
+    height: 100%;
+}
+
+.ctn-banner .container .row .col {
+    display: flex;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.ctn-banner .container .row h2 {
+    margin: auto auto !important;
+    font-family: 'Poppins';
+    font-size: 64px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;    
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .ctn-banner .container .row h2 {        
+        width: 80%;
+        font-size: calc(40px + (64 - 40) * ((100vw - 320px) / 1000));        
+    }
+}
+
+
+
+
+.ctn-info {
+    position: relative;
+    height: 210px;
+    margin: 40px 0;
+}
+
+.ctn-info .container {
+    padding: 0; 
+    height: 100%;
+    display: flex;
+}
+
+.ctn-info .container .row {
+    padding: 10px 30px; 
+    margin: auto auto;
+    background-color: rgb(242,244,247);
+    width: 100%;
+}
+
+.ctn-info .container .row h3 {
+   font-size: 30px; 
+   font-weight: 700;
+   margin: 0;
+   padding: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .ctn-info .container .row h3 {        
+        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / 1000));        
+    }
+}
+
+.ctn-info .container .col {
+    padding: 15px;
+}
+
+
+
+
+.ctn-images {
+    position: relative;
+    background-color: #2F61A5;
+    margin-bottom: 30px;
+    min-height: 200px;    
+}
+
+.ctn-images .container {
+    display: flex;
+    padding: 0; 
+    height: 100%;
+    min-height: 200px;
+}
+
+.ctn-images .container .row {
+    width: 100%;
+    margin: auto auto;
+}
+
+.ctn-images .container .row .col {
+    height: 100%;
+    padding-left: 10px;
+}
+
+.ctn-images .container .row .col-xs-12 {
+    margin: 10px 0;
+}
+
+.ctn-images .container .row h2 {
+    margin: auto auto !important;
+    font-family: 'Poppins';
+    font-size: 64px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;    
+}
+
+
+
+footer {
+    position: relative;
+    background-color: rgb(2,0,32);
+    border-color: rgb(2,0,32);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+
+.share {
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 24px;
+}
+
+.share-facebook {
+    background-color: #3b5999;
+}
+
+.share-twitter {
+    background-color: #55acee;
+}
+
+.share-google {
+    background-color: #dd4b39;
+}
+
+.share-linkedin {
+    background-color: #0077B5;
+}
+
+
+.promo-bullet {
+    display: table;
+    margin-bottom: 20px;
+}
+
+.promo-bullet-txt {
+    display: table-cell; 
+    width: 80%;
+    font-size: 23px; 
+    height: 100%; 
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.promo-bullet-img {
+    display: table-cell; 
+    height: 60px; 
+    width: 15%; 
+    min-width: 60px; 
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;    
+}
+
+.promo-bullet-img-1 {
+    background-image: url('https://digital-facile.cedricfrancoys.be/assets/img/bullet_1.png');
+}
+
+.promo-bullet-img-2 {
+    background-image: url('https://digital-facile.cedricfrancoys.be/assets/img/bullet_2.png');
+}
+
+.promo-bullet-img-3 {
+    background-image: url('https://digital-facile.cedricfrancoys.be/assets/img/bullet_3.png');
+}
+
+
+.promo-section {
+}
+
+a.promo-section-img {
+    display: block;
+    margin: auto !important;
+    min-height: 120px;
+    width: 230px;    
+    text-align: center;     
+    margin: 10px;     
+    border-radius: 10px;
+    background-color: white;
+}
+
+a.promo-section-img img {
+    width: 230px;
+    min-height: 120px;
+    border-radius: 10px;    
+    object-fit: cover;
+}
+
+a.promo-section-txt {
+    display: block;
+    font-size: 20px; 
+    color: white; 
+    width: 100%; 
+    text-align: center;
+}
+
+a.promo-section-txt:hover {
+    text-decoration: none;
+}
+
+   
+.promo-section-img:hover {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+}
+
+</style>
+</head>
+<body>
+ 
+ 
+
+ 
+<nav class="navbar navbar-default" style="width: 100%; border-radius: 0; display: block; position: fixed; z-index: 2; background-color: white;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="font-family: 'Arcade'; color: #254c82; font-size: 45px; display: inline-block; padding-top: 23px;">cedricfrancoys.be</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav menu">
+        <li><a href="#">Qui ? </a></li>
+        <li><a href="https://digital-facile.cedricfrancoys.be/">Services</a></li>        
+        <li><a href="#">Porfolio</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-comment-o"></i> Contact<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="tel:+32486152419"><i class="fa fa-phone"></i> +32486152419</a></li>
+            <li><a href="mailto:hello@cedricfrancoys.be"><i class="fa fa-envelope-o"></i> hello@cedricfrancoys.be</a></li>            
+            <li role="separator" class="divider"></li>
+            <li><a href="skype:cedricfrancoys@hotmail.com?chat"><i class="fa fa-skype"></i> Skype</a></li>
+            <li><a href="https://wa.me/32486152419"><i class="fa fa-whatsapp"></i> WhatsApp</a></li>            
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<main style="padding-top: 40px;">
+ 
+ 
+<section>
+    <div class="ctn-banner container-fluid" >
+        <div class="container">
+            <div class="row">
+                <div class="col hidden-xs col-xs-12 col-md-4 text-center" style="height: 100%;"><img style="height: 100%;width: 100%;object-fit: cover;object-position: top;" src="https://cedricfrancoys.be/packages/blog/assets/img/ced.png" /></div>
+                <div class="col col-md-8"><h2>Tout pour entreprendre à l'ère Digitale</h2></div>
+            </div>
+        </div>     
+    </div>    
+    <div class="container">
+        <div class="row" style="width: 500px; margin: auto;">
+            <div class="promo-bullet">
+                <div class="promo-bullet-img promo-bullet-img-1"></div>
+                <div class="promo-bullet-txt">Interfaçage d'outils logiciels</div>
+            </div>
+
+            <div class="promo-bullet">
+                <div class="promo-bullet-img promo-bullet-img-2"></div> 
+                <div class="promo-bullet-txt">Solutions applicatives sur mesure</div>
+            </div>
+            <div class="promo-bullet">
+                <div class="promo-bullet-img promo-bullet-img-3"></div> 
+                <div class="promo-bullet-txt">Prototypage, PoC &amp; MVC  </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+ 
+ 
+
+<section>
+    <div class="ctn-images container-fluid" >
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12 col-md-4 text-center">
+                    <div class="promo-section">
+                        <a class="promo-section-img" href="" target="_blank">
+                        <img src="https://cedricfrancoys.be/packages/blog/assets/img/button_api.png" />
+                        </a>
+                    </div>                
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                    <div class="promo-section">
+                        <a class="promo-section-img" href="" target="_blank">
+                        <img src="https://cedricfrancoys.be/packages/blog/assets/img/button_tailor.png" />
+                        </a>
+                    </div>                
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                    <div class="promo-section">
+                        <a class="promo-section-img" href="" target="_blank">
+                        <img src="https://cedricfrancoys.be/packages/blog/assets/img/button_poc.png" />
+                        </a>
+                    </div>                
+                </div>
+                
+            </div>
+        </div>     
+    </div>    
+</section>
+
+ 
+ 
+ 
+ 
+ 
+ 
+<section class="section">
+    <div class="ctn-info container-fluid" >
+    <div class="container" >
+        <div class="row">
+            <div class="col col-xs-12 text-center">            
+                <img class="" src="https://digital-facile.cedricfrancoys.be/assets/img/ced_head.png" alt="" style="display: inline-block; width: 100px; border-radius: 50%;background-color: #2F61A5;">           
+            </div>
+            <div class="col col-xs-12 text-center" >
+                <h3>Une question ? <a href="mailto:hello@cedricfrancoys.be">Discutons-en !</a></h3>
+            </div>            
+        </div>
+    </div>
+</section>
+ 
+
+
+
+ 
+ 
+
+
+<section id="sponsor">
+    <div class="ctn-banner container-fluid" >
+        <div class="container">
+            <div class="row">
+                <div class="col hidden-xs col-xs-12 col-md-4 text-center"><img style="object-fit: contain; max-width: 220px; margin: auto;" src="https://digital-facile.yesbabylon.com/assets/img/digital_facile_2.png" /></div>
+                <div class="col col-md-8"><h2>La chaîne de l'Entrepreneur Digital</h2></div>
+            </div>
+        </div>     
+    </div>
+</section>
+
+
+<section id="sponsor" >
+    <div class="container" style="margin-bottom: 30px;">
+    
+
+        <div class="row" style="max-width: 720px; margin: auto;" >
+            <h3 style="font-weight: 700; font-size: 28px; text-align: center;">Tout pour l'entrepreneur digital</h3>
+            <p style="font-size: 20px; font-weight: 400; line-height: 40px; text-align: justify;">
+            Vous êtes indépendant, chef d'entreprise ou porteur d'une idée novatrice,
+            vous avez une vision et vous souhaitez lancer un service basé sur une application ou une plateforme web ?
+            <br /><br />
+            <strong>Découvrez les clés pour décrypter les techniques et technologies de l'entreprenariat digital et convertissez votre projet en réalité !</strong>
+            <br /><br />    
+            Avec <b>Digital Facile</b> profitez de dizaines de contenus gratuits pour permettre à n'importe qui d'entreprendre dans le digital !
+            </p>
+        </div>
+    </div>
+</section> 
+
+
+<section>
+    <div class="ctn-images container-fluid" >
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12 col-md-4 text-center">
+                    <div class="promo-section promo-section-1">
+                        <a class="promo-section-img" href="https://www.youtube.com/channel/UCLspakBxqyLBHo6_vPk_ioQ?view_as=subscriber" target="_blank">
+                            <img src="https://digital-facile.cedricfrancoys.be/assets/img/button_chaine.png" />                        
+                        </a>
+                    </div>                
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                    <div class="promo-section promo-section-2">
+                        <a class="promo-section-img" href="https://digital-facile.yesbabylon.com/" target="_blank">
+                            <img src="https://digital-facile.cedricfrancoys.be/assets/img/button_formations.png" />
+                        </a>
+                    </div>                
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                    <div class="promo-section promo-section-3">
+                        <a class="promo-section-img" href="http://doc.digital-facile.yb.run/" target="_blank">
+                            <img src="https://digital-facile.cedricfrancoys.be/assets/img/button_documentation.png" />                        
+                        </a>
+                    </div>                
+                </div>
+                
+            </div>
+        </div>     
+    </div>    
+</section>
+
+
+<section class="section">
+    <div class="ctn-info container-fluid" >
+    <div class="container" >
+        <div class="row">
+            <div class="col col-xs-12 text-center" >
+                <h3>Envie de partager ?</a></h3>
+            </div>            
+        
+            <div class="col col-xs-12 text-center">            
+                <a class="share share-facebook" target="_blank" rel="noopener noreferrer" href="http://www.facebook.com/sharer/sharer.php?u=https://digital-facile.yesbabylon.com/hosting/guide"><i class="fa fa-facebook"></i></a><a class="share share-twitter" target="_blank" rel="noopener noreferrer" href="http://www.twitter.com/intent/tweet?url=https://digital-facile.yesbabylon.com/hosting/guide"><i class="fa fa-twitter"></i></a><a class="share share-google" target="_blank" rel="noopener noreferrer" href="http://plus.google.com/share?url=https://digital-facile.yesbabylon.com/hosting/guide"><i class="fa fa-google-plus"></i></a><a class="share share-linkedin" target="_blank" rel="noopener noreferrer" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://digital-facile.yesbabylon.com/hosting/guide"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+ 
+ 
+<footer>
+    <div class="container" id="ctn-footer" style="height: 100%; overflow: hidden;">
+        <div class="row" style="height: 100%; transform: translateY(30%);">
+            <div>
+                <p class="text-center"><span style="color:#797f89"><span class="font-scale-3">©2020 Cédric Françoys</span></span></p>
+                <p class="text-center" style="color: white;">
+                    <a href="https://cedricfrancoys.be/legal" target="_blank" style="color:#fffafa">Informations Légales</a>&nbsp;•&nbsp;<a href="https://cedricfrancoys.be/privacy" target="_blank" style="color:#fffafa">Vie privée</a>&nbsp;•&nbsp;<a href="https://cedricfrancoys.be/terms" target="_blank" style="color:#fffafa">Conditions</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+ 
+  
+
+
+</body>
+</html> 
