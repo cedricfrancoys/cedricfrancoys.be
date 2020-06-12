@@ -57,8 +57,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav menu">
-        <li><a href="#">Qui ? </a></li>
-        <li><a href="https://cedricfrancoys.be/services">Services</a></li>        
+        <li><a href="/">Qui ? </a></li>
+        <li><a href="/services">Services</a></li>        
         <li><a href="#">Porfolio</a></li>
       </ul>
 
