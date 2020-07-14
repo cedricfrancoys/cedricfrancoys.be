@@ -276,8 +276,9 @@
  
  
  
- 
+
  <section id="contact-area" class="contact-area-section backgroud-style">
+ <a name="contact" style="margin-top: 50px;"></a>
  <div class="container">
  <div class="contact-area-content">
  <div class="row">
@@ -306,7 +307,7 @@
          </div>
          
          <div class="contact-address">
-         <a name="contact"></a>
+
          <!--
              <div class="contact-address-details">
                  <div class="address-icon relative-position text-center float-left">
@@ -336,7 +337,7 @@
                  </div>
                  <div class="address-details ul-li-block" style="line-height: 60px;">
                      <ul>
-                        <li><a href="mailto:hello@cedricfrancoys.be">hello@cedricfrancoys.be</a></li>
+                        <li><a href="mailto:hello@cedricfrancoys.be" style="color: white;">hello@cedricfrancoys.be</a></li>
                      </ul>
                  </div>
              </div>
@@ -346,7 +347,7 @@
                  </div>
                  <div class="address-details ul-li-block" style="line-height: 60px;">
                      <ul>
-                        <li><a href="skype:cedricfrancoys@hotmail.com?chat">via Skype</a></li>
+                        <li><a href="skype:cedricfrancoys@hotmail.com?chat" style="color: white;">via Skype</a></li>
                      </ul>
                  </div>
              </div>
@@ -356,7 +357,7 @@
                  </div>
                  <div class="address-details ul-li-block" style="line-height: 60px;">
                      <ul>
-                        <li><a href="https://wa.me/32486152419">sur WhatsApp</a></li>
+                        <li><a href="https://wa.me/32486152419" style="color: white;">sur WhatsApp</a></li>
                      </ul>
                  </div>
              </div>
