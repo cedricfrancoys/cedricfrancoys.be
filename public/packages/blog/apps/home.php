@@ -278,11 +278,11 @@
  
 
  <section id="contact-area" class="contact-area-section backgroud-style">
- <a name="contact" style="argin-top: 100px;display: block;width: 100%;"></a>
+ <a name="contact" style="margin-top: 100px;display: block;width: 100%;"></a> 
  <div class="container">
  <div class="contact-area-content">
  <div class="row">
- 
+
  <div class="col-md-6">
      <div class="contact-left-content">
          <div class="section-title mb45 headline text-left">
