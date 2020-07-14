@@ -291,7 +291,7 @@
             <span class="subtitle ml42 text-uppercase">CONTACT</span>
             <h2><span>Me contacter</span></h2>
             <p>
-            Si vous avez un projet ou un besoin spécifique et que vous souhaitez en discuter, n'hésitez pas !
+            Si vous avez un projet ou un besoin spécifique et que vous souhaitez en discuter, n'hésitez pas à me contacter !
             </p>
             <!--
             <div class="about-btn text-center">
