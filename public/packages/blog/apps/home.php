@@ -276,7 +276,7 @@
  
  
  <section>
-    <a name="contact" style="margin-top: 100px; display: block;width: 100%; height: 100px;"></a> 
+    <a name="contact" style="margin-top: 100px; display: block;width: 100%; height: 60px;"></a> 
  </section>
 
  <section id="contact-area" class="contact-area-section backgroud-style">
