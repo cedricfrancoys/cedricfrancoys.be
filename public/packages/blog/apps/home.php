@@ -59,7 +59,7 @@
       <ul class="nav navbar-nav menu">
         <li><a href="/">Qui ? </a></li>
         <li><a href="/services">Services</a></li>        
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="https://portfolio.cedricfrancoys.be/">Portfolio</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -286,10 +286,11 @@
      <div class="contact-left-content">
          <div class="section-title mb45 headline text-left">
             <span class="subtitle ml42 text-uppercase">CONTACT</span>
-            <h2><span>Get in Touch</span></h2>
+            <h2><span>Me contacter</span></h2>
             <p>
-            If you're very impressed by this website and you would like to work with me, do not hesitate to stop by and say hello ;-)
+            Si vous avez un projet ou un besoin spécifique et que vous souhaitez en discuter, n'hésitez pas !
             </p>
+            <!--
             <div class="about-btn text-center">
                 <div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font" style="display: inline-block; height: 35px;line-height: 32px;">
                     <a href="#">english</a>
@@ -301,9 +302,11 @@
                     <a href="#">español</a>
                 </div>                
             </div>
+            -->
          </div>
          
          <div class="contact-address">
+         <a name="contact"></a>
          <!--
              <div class="contact-address-details">
                  <div class="address-icon relative-position text-center float-left">
@@ -333,22 +336,45 @@
                  </div>
                  <div class="address-details ul-li-block" style="line-height: 60px;">
                      <ul>
-                        <li>hello@cedricfrancoys.be</li>
+                        <li><a href="mailto:hello@cedricfrancoys.be">hello@cedricfrancoys.be</a></li>
                      </ul>
                  </div>
              </div>
+             <div class="contact-address-details">
+                 <div class="address-icon relative-position text-center float-left">
+                    <i class="fa fa-skype"></i>
+                 </div>
+                 <div class="address-details ul-li-block" style="line-height: 60px;">
+                     <ul>
+                        <li><a href="skype:cedricfrancoys@hotmail.com?chat">via Skype</a></li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="contact-address-details">
+                 <div class="address-icon relative-position text-center float-left">
+                    <i class="fa fa-whatsapp"></i>
+                 </div>
+                 <div class="address-details ul-li-block" style="line-height: 60px;">
+                     <ul>
+                        <li><a href="https://wa.me/32486152419">sur WhatsApp</a></li>
+                     </ul>
+                 </div>
+             </div>
+             
          </div>
      </div>
+     <!--
      <div class="genius-btn mt40 mb30 gradient-bg text-center text-uppercase ul-li-block bold-font">
         <a href="mailto:hello@cedricfrancoys.be">Contact Me <i class="fas fa-caret-right"></i></a>
      </div>
+     -->
  </div>
  <div class="col-md-6">
         <section id="testimonial_2" class="testimonial_2_section" style="background-color: white;">
 			<div class="container" style="width: 100%;">
 				<div class="testimonial-slide">
 					<div class="section-title-2 mb65 headline text-left">
-						<h2>Customers <span>Testimonial.</span></h2>
+						<h2><span>Témoignages</span> </h2>
 					</div>
 
 					<div id="testimonial-slide-item" class="testimonial-slide-area owl-carousel owl-theme owl-responsive-1000 owl-loaded">
@@ -383,7 +409,6 @@
                                 </div>
                             </div>
                         </div>
-
                         
                         <div class="owl-item">
                             <div class="student-qoute">
@@ -420,7 +445,7 @@
 <section id="sponsor" class="sponsor-section">
     <div class="container">
         <div class="section-title-2 mb65 headline text-left">
-            <h2>Delighted <span>Customers.</span></h2>
+            <h2>Clients <span>satisfaits.</span></h2>
         </div>
         <center>
         <div class="row" class="padding-left: 25px;">
