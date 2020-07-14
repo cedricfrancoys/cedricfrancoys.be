@@ -275,10 +275,12 @@
  
  
  
- 
+ <section>
+    <a name="contact" style="margin-top: 100px; display: block;width: 100%; height: 100px;"></a> 
+ </section>
 
  <section id="contact-area" class="contact-area-section backgroud-style">
- <a name="contact" style="margin-top: 100px;display: block;width: 100%;"></a> 
+ 
  <div class="container">
  <div class="contact-area-content">
  <div class="row">
