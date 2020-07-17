@@ -513,7 +513,18 @@
                     <img src="https://cedricfrancoys.be/packages/blog/assets/img/betterfinance.png" alt="">
                 </div>
             </div>
-                   
+
+            <div class="col-md-3" >
+                <div class="sponsor-pic">
+                    <img src="https://cedricfrancoys.be/packages/blog/assets/img/marcusbiel.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3" >
+                <div class="sponsor-pic">
+                    <img src="https://cedricfrancoys.be/packages/blog/assets/img/trendshopy.png" alt="">
+                </div>
+            </div>            
 
 
         </div>
