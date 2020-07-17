@@ -489,6 +489,30 @@
                     <img src="https://cedricfrancoys.be/packages/blog/assets/img/parkway.jpg" alt="">
                 </div>
             </div>
+
+            <div class="col-md-3" >
+                <div class="sponsor-pic">
+                    <img src="https://cedricfrancoys.be/packages/blog/assets/img/kaleo.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3" >
+                <div class="sponsor-pic">
+                    <img src="https://cedricfrancoys.be/packages/blog/assets/img/dies.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3" >
+                <div class="sponsor-pic">
+                    <img src="https://cedricfrancoys.be/packages/blog/assets/img/wharn.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3" >
+                <div class="sponsor-pic">
+                    <img src="https://cedricfrancoys.be/packages/blog/assets/img/betterfinance.jpg" alt="">
+                </div>
+            </div>
                    
 
 
