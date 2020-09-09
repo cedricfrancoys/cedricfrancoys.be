@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-<script>function() { coonsole.log('test'); }</script
+<script>function() { coonsole.log('test'); }</script>
 
 <script src="https://cmp.osano.com/Azyw7LSA4W1zR5JN/9f77b139-b3f9-4604-9263-f50cd0c975d0/osano.js"></script>
 
