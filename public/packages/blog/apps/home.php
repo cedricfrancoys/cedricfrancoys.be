@@ -11,27 +11,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-<script>function test() { coonsole.log('test'); }</script>
-
-<script src="https://cmp.osano.com/Azyw7LSA4W1zR5JN/9f77b139-b3f9-4604-9263-f50cd0c975d0/osano.js"></script>
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script>
 <script type="text/javascript" src="/packages/blog/assets/js/slick.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <script>
-
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
     $(document).ready( function() {
-        ga('create', 'UA-171256748-1', 'auto');
-        ga('send', 'pageview');
-        
+
         $('#testimonial-slide-item').slick({
             infinite: true,
             slidesToShow: 1,
