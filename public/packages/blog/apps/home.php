@@ -11,13 +11,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+<script src="https://cmp.osano.com/Azyw7LSA4W1zR5JN/9f77b139-b3f9-4604-9263-f50cd0c975d0/osano.js"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script>
 <script type="text/javascript" src="/packages/blog/assets/js/slick.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<script src="https://cmp.osano.com/Azyw7LSA4W1zR5JN/9f77b139-b3f9-4604-9263-f50cd0c975d0/osano.js"></script>
-
 
 <script>
     $(document).ready( function() {
