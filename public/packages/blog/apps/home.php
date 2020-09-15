@@ -34,12 +34,14 @@
     });
 
     function setGACookies() {
+        console.log('setGACookies');
+        /*
         window['ga-disable-UA-178008430-1'] = false;
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-178008430-1', { 'anonymize_ip': true });
-
+        */
     };    
         
     $(document).ready( function() {
