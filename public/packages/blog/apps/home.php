@@ -15,6 +15,17 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script>
 <script type="text/javascript" src="/packages/blog/assets/js/slick.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178008430-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178008430-1');
+</script>
+
 <script>
     $(document).ready( function() {
 
