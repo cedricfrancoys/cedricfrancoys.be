@@ -46,6 +46,10 @@
         s.src = "https://www.googletagmanager.com/gtag/js?id=UA-178008430-1}";
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
+        gtag('event', 'sign_up', {
+                'method': 'Google',
+                'event_callback': function(){alert('event was sent');}
+            });        
     };
     
         
