@@ -32,10 +32,6 @@
       }
       
     });
-    
-    
-    
-
 
     function setGACookies() {
         window['ga-disable-UA-178008430-1'] = false;
@@ -44,8 +40,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-178008430-1', { 'anonymize_ip': true });
 
-    };
-    
+    };    
         
     $(document).ready( function() {
 
