@@ -22,6 +22,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178008430-1"></script>
 
 <script>
+/*
     window.Osano.cm.addEventListener("osano-cm-initialized", function (consentObject) {
       if (consentObject.MARKETING === "ACCEPT") {
             console.log('marketing accepted');
@@ -32,7 +33,7 @@
       }
       
     });
-
+*/
     function setGACookies() {
         console.log('setGACookies');
         /*
