@@ -19,6 +19,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178008430-1"></script>
+
 <script>
     window.Osano.cm.addEventListener("osano-cm-initialized", function (consentObject) {
       if (consentObject.MARKETING === "ACCEPT") {
@@ -31,33 +33,18 @@
       
     });
     
-    //it is absolutely crucial to define gtag in the global scope
     
-    function gtag(){ gtagPush(arguments);}
+    
+
 
     function setGACookies() {
-        var s = document.createElement('script');
-        s.type = "text/javascript"
-        s.async = "true";
-        s.src = "https://www.googletagmanager.com/gtag/js?id=UA-178008430-1}";
-        var x = document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
+        window['ga-disable-UA-178008430-1'] = false;
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-178008430-1', { 'anonymize_ip': true });
 
-        setTimeout(function() {
-            gtag('js', new Date());
-            gtag('config', 'UA-178008430-1');
-            
-            gtag('event', 'sign_up', {
-                    'method': 'Google',
-                    'event_callback': function(){alert('event was sent');}
-            });        
-        }, 1000);        
     };
-    
-    function gtagPush() {
-        window.dataLayer = window.dataLayer || [];        
-        dataLayer.push(arguments);
-    }
     
         
     $(document).ready( function() {
