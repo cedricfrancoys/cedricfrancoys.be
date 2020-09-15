@@ -28,22 +28,26 @@
       }
       if (consentObject.ANALYTICS === "ACCEPT") {
             console.log('analytics accepted');
-
-            var a = document.createElement('script');
-            var m = document.getElementsByTagName('script')[0];
-            a.async = 1;
-            a.src = 'https://www.googletagmanager.com/gtag/js?id=UA-178008430-1';
-            m.parentNode.insertBefore(a, m);
-          
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-178008430-1');
-
+            setGACookies();
       }
       
     });
+    
+    //it is absolutely crucial to define gtag in the global scope
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-178008430-1');
+
+    function setGACookies() {
+        var s = document.createElement('script');
+        s.type = "text/javascript"
+        s.async = "true";
+        s.src = "https://www.googletagmanager.com/gtag/js?id=UA-178008430-1}";
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    };
+    
         
     $(document).ready( function() {
 
