@@ -67,6 +67,9 @@
 
 
     });
+    setTimeout(function() {
+        console.log(window.dataLayer);
+    }, 5000);
 </script>
 
 </head>
