@@ -62,7 +62,9 @@
         });        
 
 
-
+        setTimeout(function() {
+            $('.osano-cm-widget').click();
+        }, 5000);
     });
 
 </script>
