@@ -22,6 +22,29 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178008430-1"></script>
 
 <script>
+    window.Osano.cm.addEventListener("osano-cm-initialized", function (consentObject) {
+      if (consentObject.MARKETING === "ACCEPT") {
+        //run marketing scripts
+      }
+      if (consentObject.ANALYTICS === "ACCEPT") {
+            console.log('analytics accepted');
+
+            var a = document.createElement('script');
+            var m = document.getElementsByTagName('script')[0];
+            a.async = 1;
+            a.src = 'https://www.googletagmanager.com/gtag/js?id=UA-178008430-1';
+            m.parentNode.insertBefore(a, m);
+          
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-178008430-1');
+
+      }
+      
+    });
+        
     $(document).ready( function() {
 
         $('#testimonial-slide-item').slick({
@@ -33,20 +56,7 @@
             respondTo: 'min'
         });        
 
-        window.Osano.cm.addEventListener("osano-cm-initialized", function (consentObject) {
-          if (consentObject.MARKETING === "ACCEPT") {
-            //run marketing scripts
-          }
-          if (consentObject.ANALYTICS === "ACCEPT") {
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
 
-              gtag('config', 'UA-178008430-1');
-
-          }
-          
-        });
 
     });
 </script>
