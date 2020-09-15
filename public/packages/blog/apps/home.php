@@ -34,10 +34,8 @@
     });
     
     //it is absolutely crucial to define gtag in the global scope
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-178008430-1');
+    
+    function gtag(){ gtagPush(arguments);}
 
     function setGACookies() {
         var s = document.createElement('script');
@@ -46,11 +44,22 @@
         s.src = "https://www.googletagmanager.com/gtag/js?id=UA-178008430-1}";
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
-        gtag('event', 'sign_up', {
-                'method': 'Google',
-                'event_callback': function(){alert('event was sent');}
+
+        setTimeout(function() {
+            gtag('js', new Date());
+            gtag('config', 'UA-178008430-1');
+            
+            gtag('event', 'sign_up', {
+                    'method': 'Google',
+                    'event_callback': function(){alert('event was sent');}
             });        
+        }, 1000);        
     };
+    
+    function gtagPush() {
+        window.dataLayer = window.dataLayer || [];        
+        dataLayer.push(arguments);
+    }
     
         
     $(document).ready( function() {
@@ -67,9 +76,7 @@
 
 
     });
-    setTimeout(function() {
-        console.log(window.dataLayer);
-    }, 5000);
+
 </script>
 
 </head>
