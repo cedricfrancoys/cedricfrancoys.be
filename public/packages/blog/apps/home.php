@@ -68,7 +68,11 @@
     });
 
 </script>
-
+<style>
+.osano-cm-widget {
+    display: none;
+}
+</style>
 </head>
 <body>
  
