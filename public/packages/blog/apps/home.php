@@ -62,15 +62,12 @@
         });        
 
 
-        setTimeout(function() {
-            $('.osano-cm-widget').click();
-        }, 5000);
-    });
+     });
 
 </script>
 <style>
 .osano-cm-widget {
-    display: none;
+    /* display: none; */
 }
 </style>
 </head>
