@@ -20,13 +20,6 @@
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178008430-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-178008430-1');
-</script>
 
 <script>
     $(document).ready( function() {
@@ -39,6 +32,21 @@
             autoplaySpeed: 3000,
             respondTo: 'min'
         });        
+
+        window.Osano.cm.addEventListener("osano-cm-initialized", function (consentObject) {
+          if (consentObject.MARKETING === "ACCEPT") {
+            //run marketing scripts
+          }
+          if (consentObject.ANALYTICS === "ACCEPT") {
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-178008430-1');
+
+          }
+          
+        });
 
     });
 </script>
