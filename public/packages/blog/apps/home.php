@@ -19,8 +19,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178008430-1"></script>
-
 <script>
     window.Osano.cm.addEventListener("osano-cm-initialized", function (consentObject) {
       if (consentObject.MARKETING === "ACCEPT") {
