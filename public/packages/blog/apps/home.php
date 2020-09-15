@@ -24,7 +24,7 @@
 <script>
     window.Osano.cm.addEventListener("osano-cm-initialized", function (consentObject) {
       if (consentObject.MARKETING === "ACCEPT") {
-        //run marketing scripts
+            console.log('marketing accepted');
       }
       if (consentObject.ANALYTICS === "ACCEPT") {
             console.log('analytics accepted');
